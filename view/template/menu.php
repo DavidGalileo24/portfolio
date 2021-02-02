@@ -1,11 +1,11 @@
 	<div class="container-fluid menu">
 		<div class="row">
 			<div class="col-md-2 text-center">
-				<h2 class="logo">David<span class="two">Salgado</span></h2>
+				<a href="index.php" class="alogo"><h2 class="logo">David<span class="two">Salgado</span></h2></a>
 			</div>
 			<div class="col-md-4">
 				<ul class="lista_menu">
-					<li class="item_menu"><a href="?s=main" class="enlace"><strong>Inicio</strong></a></li>
+					<li class="item_menu"><a href="index.php" class="enlace"><strong>Inicio</strong></a></li>
 					<li class="item_menu"><a href="?s=about" class="enlace"><strong>Sobre mí</strong></a></li>
 					<li class="item_menu"><a href="?s=contact" class="enlace"><strong>Contáctame</strong></a></li>
 					<li class="item_menu"><a href="#" class="enlace" id="submenu"><strong>Opciones</strong></a></li>

@@ -1,9 +1,9 @@
 :root{
-	--color1: #1fab89;
-	--color2: #62d2a2;
-	--color3: #9df3c4;
-	--color4: #d7fbe8;
-	--color5: #add2c9;
+	--color1: #048998;
+	--color2: #3bb4c1;
+	--color3: #78b7bb;
+	--color4: #e3e3e3;
+	--color5: #f6f5f5;
 }
 *{
 	margin: 0;
@@ -12,12 +12,16 @@
 }
 body{
 	font-family: 'Raleway', sans-serif;
+	background-color: var(--color5);
 }
 
 .logo{
 	font-family: 'Great Vibes', cursive;
 	margin: 5px;
 	color: var(--color4);
+}
+.alogo{
+	text-decoration: none;
 }
 .two{
 	color: var(--color5);
@@ -41,6 +45,12 @@ body{
 	display: inline-block;
 	margin: 10px 7px;
 }
+.item_menu:hover{
+	text-decoration: none;
+	transition: all;
+	transition-duration: .3s;
+	color: var(--color3);
+}
 .social_cont{
 	text-align: center;
 	margin-top: 5px;
@@ -57,6 +67,13 @@ body{
 	display: block;
 	margin: 0 auto;
 	border: 10px double var(--color3);
+	transition: all;
+	transition-duration: .4s;
+
+}
+.img_personal:hover{
+	width: 235px;
+	height: 235px;
 }
 .social:hover{
 	color: var(--color5);
@@ -66,10 +83,23 @@ body{
 .cont2{
 	height: 80vh;
 }
-
-
-
-
+.techs{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+.servicesF{
+	text-align: center;
+	color: var(--color1);
+	padding: 7px;
+	font-size: 2em;
+}
+.beneficiosF > li{
+	list-style: none;
+}
+.iconsF{
+	color: var(--color2);
+}
 
 
 
