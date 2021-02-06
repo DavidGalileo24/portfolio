@@ -36,11 +36,6 @@
 		//timeline js
 		$('.js-timeline').Timeline();
 
-
-
-
-
-
 	</script>
 </body>
 </html>

@@ -185,8 +185,25 @@ ul li{
 .menu_movil{
 	display: none;
 }
+.fp-controlArrow.fp-next, 
+.fp-controlArrow.fp-prev{
+	margin-top: 10%;
+	
+}
+.fp-controlArrow.fp-prev{
+	margin-left: 82%;
+	background-color: blue;
+	border-width: 20px 20px 20px 0;
+	border-color: transparent var(--color2) transparent transparent;
+	background-color: var(--color2);
 
-
+}
+.fp-controlArrow.fp-next{
+	margin-right: 2%;
+	border-width: 20px 0 20px 20px;
+	border-color: transparent transparent transparent var(--color2);
+	background-color: var(--color3);
+}
 /*
 	Movil
 	*/
