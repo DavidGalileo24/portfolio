@@ -1,3 +1,5 @@
+	
+	
 	<!--jquery-->
 	<script  src="node_modules/jquery/dist/jquery.js"></script>
 	<!--bootstrap-->
@@ -8,23 +10,35 @@
 	<!--fullpage-->
 	<script  src="node_modules/fullpage.js/dist/fullpage.js"></script>
 	<!--popper-->
-	<script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
+	<script  src="assets/js/popper.min.js"></script>
+	<!--timeline js-->
+	<script src="node_modules/timelinejs-slider/dist/js/timeline.min.js"></script>
 	
 
 	<script>
+
+		//fullpage js
 		let myfullpage = new fullpage('#fullpage', {
-			licenseKey: 'YOUR_KEY_HERE'
+			navigation: true,
+			menu: '#menu',
+			anchors: ['inicio', 'sobremi', 'servicios', 'tech', 'contactame'],
+			navigationTooltips: ['Inicio', 'Sobre mí', 'Servicios', 'Tecnólogias', 'Contactame'],
+			showActiveTooltips: true,
+			verticalCentered: true,
 		});
 
+		//popper js
 		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 			return new bootstrap.Tooltip(tooltipTriggerEl)
-		})
-
-		let submenu = document.querySelector('#submenu');
-		submenu.addEventListener('click', function(){
-
 		});
+
+		//timeline js
+		$('.js-timeline').Timeline();
+
+
+
+
 
 
 	</script>
