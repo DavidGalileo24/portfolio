@@ -21,10 +21,12 @@
 		let myfullpage = new fullpage('#fullpage', {
 			navigation: true,
 			menu: '#menu',
-			anchors: ['inicio', 'sobremi', 'servicios', 'tech', 'contactame'],
-			navigationTooltips: ['Inicio', 'Sobre mí', 'Servicios', 'Tecnólogias', 'Contactame'],
+			anchors: ['inicio', 'sobremi', 'servicios', 'contactame'],
+			navigationTooltips: ['Inicio', 'Sobre mí', 'Servicios', 'Contáctame'],
 			showActiveTooltips: true,
 			verticalCentered: true,
+			controlArrows: true,
+			slidesNavigation: false
 		});
 
 		//popper js

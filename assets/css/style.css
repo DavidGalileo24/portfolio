@@ -106,6 +106,14 @@ body{
 }
 .beneficiosF > li{
 	list-style: none;
+	margin: 5px;
+	
+}
+.texch{
+
+}
+.textosBen{
+	margin-bottom: 20%;
 }
 .iconsF{
 	color: var(--color2);
@@ -115,7 +123,7 @@ body{
 	height: 100px;
 	transition: all;
 	transition-duration: .3s;
-	
+
 }
 .tech_images:hover{
 	padding: 5px;
@@ -128,11 +136,14 @@ ul li{
 	border: 2px solid var(--color3);
 	border-radius: 10px;
 	padding: 25px;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 }
 .parrafobout{
 	font-size: 1.2em;
-	margin-top: 10%;
+	margin-top: 20%;
+}
+.hab{
+
 }
 .one{
 	background-color: var(--color2);
@@ -163,7 +174,8 @@ ul li{
 	color: var(--color7);
 }
 #fp-nav ul li a span{
-	background: aquamarine;
+	background: var(--color2);
+	color: var(--color1);
 }
 .imgservices{
 	width: 95%;
@@ -180,30 +192,31 @@ ul li{
 
 }
 .servicesf{
-	margin-top: 15%;
+	margin-top: 5%;
 }
 .menu_movil{
 	display: none;
 }
-.fp-controlArrow.fp-next, 
-.fp-controlArrow.fp-prev{
+.rowF{
+	font-size: 3.5em;
+	color: var(--color2);
+}
+.arro{
 	margin-top: 10%;
+}
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev{
+	background-color: white;
+	margin-top: 15%;
+}
+.fp-controlArrow.fp-prev{
+	margin-left: 85%;
 	
 }
-.fp-controlArrow.fp-prev{
-	margin-left: 82%;
-	background-color: blue;
-	border-width: 20px 20px 20px 0;
-	border-color: transparent var(--color2) transparent transparent;
-	background-color: var(--color2);
-
-}
 .fp-controlArrow.fp-next{
-	margin-right: 2%;
-	border-width: 20px 0 20px 20px;
-	border-color: transparent transparent transparent var(--color2);
-	background-color: var(--color3);
+	margin-right: 5%;	
 }
+
 /*
 	Movil
 	*/
@@ -238,7 +251,7 @@ ul li{
 			height: 85px;
 		}
 		.techs{
-			margin-bottom: 0;
+			margin-bottom: 5%;
 		}
 		.menu_movil{
 			display: block;
@@ -265,8 +278,114 @@ ul li{
 			display: inline-block;
 			margin: 10px 7px;
 		}
+		.fp-controlArrow.fp-next,
+		.fp-controlArrow.fp-prev{
+			background-color: white;
+			margin-top: 25%;
+		}
+		.fp-controlArrow.fp-prev{
+			margin-left: 85%;
+
+		}
+		.fp-controlArrow.fp-next{
+			display: block;	
+		}
+		.li2.active{
+			color: white;
+			background-color: var(--color5);
+			padding: 2px;
+			border-radius: 10px;
+		}
+		.imgBen{
+			display: none;
+		}
+		
+
 	}
 
+	/*
+		TABLET
+	*/
+
+
+	@media (max-width: 768px){
+		.lista_menu .item_menu{
+			display: none;
+		}
+		.social_cont{
+			display: none;
+		}
+		.menu_movil{
+			display: block;
+			background-color: var(--color1);
+			height: 10vh;
+			max-height: 10vh;
+			padding: 5px;
+		}
+		.menu{
+			display: none;
+		}
+		.menu_f{
+			font-size: 2em;
+			color: var(--color2);
+			margin: 20px;
+			margin-top: 5px;
+		}
+		.ul2{
+			list-style: none;
+
+		}
+		.li2{
+			display: flex;
+			display: inline-block;
+			margin: 10px 7px;
+		}
+		.li2.active{
+			color: white;
+			background-color: var(--color5);
+			padding: 2px;
+			border-radius: 10px;
+		}
+		.imgBen{
+			display: none;
+		}
+		.imgservices{
+			display: none;
+		}
+		.parrafobout{
+			margin-top: 10px;
+		}
+		.avatarimg{
+			display: none;
+		}
+		.aboutme{
+		}
+		
+		
+	}
+
+
+
+
+	@media (max-width: 992px){
+		.social_cont{
+			display: none;
+		}
+		.imgBen{
+			display: none;
+		}
+		.aboutme{
+			width: 90%;
+			margin: 0 auto;
+		}
+		.parrafobout{
+			margin-top: 10px;
+		}
+		.avatarimg{
+			display: none;
+		}
+		
+	}
 
 
 
