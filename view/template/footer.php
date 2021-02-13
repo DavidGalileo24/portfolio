@@ -21,8 +21,8 @@
 		let myfullpage = new fullpage('#fullpage', {
 			navigation: true,
 			menu: '#menu',
-			anchors: ['inicio', 'sobremi', 'servicios', 'contactame'],
-			navigationTooltips: ['Inicio', 'Sobre mí', 'Servicios', 'Contáctame'],
+			anchors: ['inicio', 'portfolio', 'sobremi', 'servicios', 'contactame'],
+			navigationTooltips: ['Inicio', 'Portfolio', 'Sobre mí', 'Servicios', 'Contáctame'],
 			showActiveTooltips: true,
 			verticalCentered: true,
 			controlArrows: true,

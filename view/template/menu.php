@@ -8,6 +8,8 @@
 				<ul class="lista_menu" id="menu">
 					<li class="item_menu active" data-menuanchor="inicio"><a href="#inicio" class="enlace active"><strong>Inicio</strong></a></li>
 
+					<li class="item_menu" data-menuanchor="portfolio"><a href="#portfolio" class="enlace"><strong>Portfolio</strong></a></li>
+
 					<li class="item_menu" data-menuanchor="sobremi"><a href="#sobremi" class="enlace"><strong>Sobre mí</strong></a></li>
 
 

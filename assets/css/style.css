@@ -98,7 +98,7 @@ body{
 	text-align: center;
 	margin-bottom: 5%;
 }
-.servicesF{
+.servicesFe{
 	text-align: center;
 	color: var(--color1);
 	padding: 7px;
@@ -140,7 +140,7 @@ ul li{
 }
 .parrafobout{
 	font-size: 1.2em;
-	margin-top: 20%;
+	margin-top: 10%;
 }
 .hab{
 
@@ -192,7 +192,7 @@ ul li{
 
 }
 .servicesf{
-	margin-top: 5%;
+	margin-top: 0;
 }
 .menu_movil{
 	display: none;
@@ -216,6 +216,8 @@ ul li{
 .fp-controlArrow.fp-next{
 	margin-right: 5%;	
 }
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+display: none;}
 
 /*
 	Movil
@@ -299,6 +301,9 @@ ul li{
 		.imgBen{
 			display: none;
 		}
+		.menul{
+			text-align: center;
+		}
 		
 
 	}
@@ -360,7 +365,9 @@ ul li{
 		}
 		.aboutme{
 		}
-		
+		.menul{
+			text-align: center;
+		}
 		
 	}
 
@@ -383,6 +390,9 @@ ul li{
 		}
 		.avatarimg{
 			display: none;
+		}
+		.menul{
+			text-align: center;
 		}
 		
 	}

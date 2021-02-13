@@ -17,7 +17,7 @@
 					<h2>Mi nombre es David Galileo Salgado</h2>
 					<h2><strong>Desarrollador web Frontend</strong></h2>
 					<br>
-					<a href="?s=portfolio" class="btn btn-info"><i class="fas fa-folder-open"></i> Portfolio</a>
+					<a href="#" class="btn btn-info"><i class="fas fa-folder-open"></i> Portfolio</a>
 					<a href="assets/David Galileo Salgado Mejía.pdf" download="" class="btn btn-success" id="btnCV" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Descarga mi hoja de vida"><i class="fas fa-download"></i> Hoja de vida</a>
 
 				</div>
@@ -26,18 +26,17 @@
 		</div> <!--End inicio-->
 
 		<!--Sobre mí-->
-		<div class="container-fluid section p-1">
-			<div class="slide">
+		<div class="container section p-1">
 				<div class="row">
 					<div class="col-md-12">
 						<br><h1 class="text-center">Sobre mí</h1><br>
 					</div>
 
-					<div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">
+					<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
 						<p class="text-center parrafobout">Soy un desarrollador web frontend salvadoreño, fanatico de las peliculas y series y disfrutar de la compañia de mi familia y amigos</p>
 					</div>
 
-					<div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 aboutme">
+					<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6 aboutme">
 						<div class="row">
 							<div class="col-md-6">
 
@@ -53,93 +52,55 @@
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-md-6 col-lg-3 col-xl-3 text-center hab">
-						<h3>Habilidades sociales</h3>
-						<ul>
-							<li>Responsabilidad</li>
-							<li>Respeto</li>
-							<li>Empatía</li>
-							<li>Solidaridad</li>
-							<li>Responsabilidad</li>
-							<li>Trabajo en equipo</li>
-							<li>Proactividad</li>
-							<li>Organización</li>						
-						</ul>
-					</div>
-				</div>
 			</div> <!--end datos-->
 
-			
-			<div class="container-fluid">
-				<div class="slide">
-					<div class="row">
-						<div class="col-md-12 estudios">
-							<br><h1 class="text-center">Estudios</h1><br>
-							<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=14WCPnwBcDbJa276WjUBhr-U5biRLGaDvP2F4h-BWmAU&font=Default&lang=en&initial_zoom=2' width='100%' height='100%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
+		
 
-			
-			<div class="container-fluid">
-				<div class="slide">
-					<div class="row">
-						<div class="col-md-12 estudios">
-							<br><h1 class="text-center">Experiencia laboral</h1><br>
-							<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1tL6IGWpdRNPQyn41aQFUUdo4RGtqhIDkEFimc_MkbHc&font=Default&lang=en&initial_zoom=2' width='100%' height='100%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div><!--end sobre mí-->
 
 
 
 		<!--Services-->
-		<div class="container-fluid section servicesf">
+		<div class="container section servicesf">
 			
 			<div class="slide">
 				<div class="row">
 					<div class="col-md-1"></div>
-					<div class="col-md-6 text-center">
+					<div class="col-md-12 text-center">
 						<br><h1>Servicios</h1><br>
 						<div class="row">
 
 							<div class="col-xs-6 col-md-6 col-lg-4 col-xl-4 contcard">
 								<div class="card p-2">
-									<i class="fas fa-layer-group servicesF"></i>
+									<i class="fas fa-layer-group servicesFe"></i>
 									<div class="card-body">
 										<h3>Diseño de interfaces (UI/UX)</h3>
 									</div>
 								</div>
 							</div>
+							
 							<div class="col-xs-6 col-md-6 col-lg-4 col-xl-4 contcard">
 								<div class="card p-2">
-									<i class="fas fa-laptop-code servicesF"></i>
-									<div class="card-body">
-										<h3>Desarrollo de sistemas web</h3>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-6 col-md-6 col-lg-4 col-xl-4 contcard">
-								<div class="card p-2">
-									<i class="fas fa-shopping-cart servicesF"></i>
+									<i class="fas fa-shopping-cart servicesFe"></i>
 									<div class="card-body">
 										<h3>Desarrollo de sistemas E-commerce</h3>
 									</div>
 								</div>
 							</div>
-
+							<div class="col-xs-6 col-md-6 col-lg-4 col-xl-4 contcard">
+								<div class="card p-2">
+									<i class="fas fa-laptop-code servicesFe"></i>
+									<div class="card-body">
+										<h3>Desarrollo de sistemas web</h3>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-5">
-						<img src="assets/images/img2.png" alt="" class="img-fluid img-responsive imgservices" loading="lazy">
 					</div>
 				</div>
 			</div>
 
-			<!--Beneficios-->
+			<!--Beneficios
 			<div class="container-fluid">
 				<div class="slide">
 					<div class="row">
@@ -179,7 +140,7 @@
 						</div>
 					</div>
 				</div>
-
+				-->
 				<!--Skills-->
 				<div class="container-fluid texch">
 					<div class="slide">
@@ -196,31 +157,43 @@
 					</div>
 				</div>
 			</div> <!--end services-->
+			<br><br>
 
-		<!--Contacto-->
-		<div class="container-fluid section contactate1">
-			<div class="row">
-				<div class="col-md-12">
-					<br><h2 class="text-center">Contáctame</h2><br>
-					<h5 class="text-center">Puedes contactarme mediante mis redes sociales... ¡Será un gusto hablar contigo!</h5>
+			<!--Contacto-->
+			<div class="container-fluid section contactate1">
+				<div class="row">
+					<div class="col-md-12">
+						<br><h2 class="text-center">Contáctame</h2><br>
+						<h5 class="text-center">Puedes contactarme mediante mis redes sociales... ¡Será un gusto hablar contigo!</h5>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-6 social_cont2 text-center" style="margin-bottom: 10%;">
+						<a href="https://github.com/DavidGalileo24" target="blank"><i class="social2 fab fa-github" data-bs-toggle="tooltip" data-bs-placement="left" title="Github"></i></a>
+
+						<a href="https://www.instagram.com/david_galileo24/" target="blank"><i class="social2 fab fa-instagram" data-bs-toggle="tooltip" data-bs-placement="left" title="Instagram"></i></a>
+
+						<a href="https://www.linkedin.com/in/david-galileo-salgado-mej%C3%ADa-b1a07b128/" target="blank"><i class="social2 fab fa-linkedin" data-bs-toggle="tooltip" data-bs-placement="left" title="Linkedin"></i></a>
+
+						<a href="https://www.pinterest.es/davidgalileos/_saved/" target="blank"><i class="social2 fab fa-pinterest" data-bs-toggle="tooltip" data-bs-placement="left" title="Pinterest"></i></a>
+					</div>
+					<div class="col-md-3"></div>
 				</div>
-				<div class="col-md-3"></div>
-				<div class="col-md-6 social_cont2 text-center" style="margin-bottom: 10%;">
-					<a href="https://github.com/DavidGalileo24" target="blank"><i class="social2 fab fa-github" data-bs-toggle="tooltip" data-bs-placement="left" title="Github"></i></a>
-
-					<a href="https://www.instagram.com/david_galileo24/" target="blank"><i class="social2 fab fa-instagram" data-bs-toggle="tooltip" data-bs-placement="left" title="Instagram"></i></a>
-
-					<a href="https://www.linkedin.com/in/david-galileo-salgado-mej%C3%ADa-b1a07b128/" target="blank"><i class="social2 fab fa-linkedin" data-bs-toggle="tooltip" data-bs-placement="left" title="Linkedin"></i></a>
-
-					<a href="https://www.pinterest.es/davidgalileos/_saved/" target="blank"><i class="social2 fab fa-pinterest" data-bs-toggle="tooltip" data-bs-placement="left" title="Pinterest"></i></a>
-				</div>
-				<div class="col-md-3"></div>
 			</div>
-		</div>
+			
 
-
-	</div><!--end fullpage-->
-
-
-
-	<?php include_once 'view/template/footer.php'; ?>
+		</div><!--end fullpage-->
+		
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+				var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+				s1.async=true;
+				s1.src='https://embed.tawk.to/6022f7069c4f165d47c1a7e7/1eu499sbr';
+				s1.charset='UTF-8';
+				s1.setAttribute('crossorigin','*');
+				s0.parentNode.insertBefore(s1,s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
+		<?php include_once 'view/template/footer.php'; ?>
