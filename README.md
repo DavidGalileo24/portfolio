@@ -1,44 +1,27 @@
-DavidSalgado
+## David Salgado Portfolio
+
+####Ficha de software
+- Sitio web informativo desarrollado con diversas tecnologías tanto de frontend y de backend en un  tiempo estimado de una semana, implementando un chatbot para una comunicación más amena y la opción de cambiar de idioma y cambiar a modo oscuro el sitio. 
+
+- Nombre de proyecto: David Salgado Portfolio
+
+- Cliente: David Salgado
+
+- Tiempo de desarrollo: Una semana.
+
+- Estado: En desarrollo.
+
+- Ambiente: Desarrollo web.
 
 
 
 
+####Tecnologías
 
-### Ficha de software
-**Nombre de proyecto:**  Portfolio David Salgado
-
-------------
-
-
-**Detalles de proyecto:** Sitio web desarrollado con diversas tecnologías en ambiente web donde el usuario podrá acceder a información detallada del cliente, incluyendo sus trabajos más recientes
-
-------------
-
-
-**Estado**: En producción
-
-------------
-
-
-**Desarrolladores:** [David Salgado][1]
-
-------------
-
-
-**Idioma:** Español.
-
-------------
-
-
-**Ambiente**: Web
-
-------------
-
-
-**Tecnologías: ** 
-	-	Lenguajes de programación: Javascript, PHP.
-	-	Bases de datos: MySQL.
-	-	Frameworks: Bootstrap, jQuery.
-	-	Librerias: FullPage.js, Toast.js, TimeLine.js, Normalize.css, Fontawesome.css, Hammer.js, Popper.js
-[1]: http://https://github.com/DavidGalileo24 "David Salgado"
-[1]: http://https://github.com/DavidGalileo24 "David Salgado"
+| Lenguajes de programación  | Frameworks  |Librería|
+| :------------ |:---------------:| -----:|
+| PHP| Bootstrap | FullPage.js |
+| Javascript  | jQuery| Popper.js|
+| | | Normalize.css|
+| | | Popper.js|
+| | | Hammer.js|
