@@ -10,4 +10,14 @@ class Socialmedia extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+
+    public function image(){
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+
+    public function link(){
+        return $this->morphOne(Link::class, 'linkeable');
+    }
 }

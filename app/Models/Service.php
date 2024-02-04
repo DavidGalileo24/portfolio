@@ -9,5 +9,16 @@ class Service extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'technology_id'];
+    protected $fillable = ['name', 'description'];
+
+    
+    public function technologies(){
+        return $this->belongsToMany(Technologie::class);
+    } 
+
+
+    public function image(){
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
 }
