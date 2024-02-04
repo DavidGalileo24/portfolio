@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['file', 'imageable_id', 'imageable_model'];
+
+    
+    public function imageable(){
+        return $this->morphTo();
+    }
 }
