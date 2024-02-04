@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('technologies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('percentaje');
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }

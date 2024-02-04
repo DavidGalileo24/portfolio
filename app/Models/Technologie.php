@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Technologie extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'percentaje', 'type'];
 }
