@@ -11,14 +11,13 @@ class Service extends Model
 
     protected $fillable = ['name', 'description'];
 
-    
-    public function technologies(){
+    public function technologies()
+    {
         return $this->belongsToMany(Technologie::class);
-    } 
-
-
-    public function image(){
-        return $this->morphOne(Image::class, 'imageable');
     }
 
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

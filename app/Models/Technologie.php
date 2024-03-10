@@ -13,17 +13,16 @@ class Technologie extends Model
     protected $fillable = ['name', 'percentaje', 'type'];
 
     protected $cast = [
-        'type' => TechTypeEnum::class
+        'type' => TechTypeEnum::class,
     ];
 
-    
-    public function services(){
+    public function services()
+    {
         return $this->belongsToMany(Service::class);
     }
 
-
-    public function image(){
+    public function image()
+    {
         return $this->morphOne(Image::class, 'imageable');
     }
-
 }

@@ -11,8 +11,8 @@ class Link extends Model
 
     protected $fillable = ['url', 'linkeable_id', 'linkeable_model'];
 
-    
-    public function linkeable(){
+    public function linkeable()
+    {
         return $this->morphTo();
     }
 }

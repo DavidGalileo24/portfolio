@@ -18,7 +18,7 @@ class ServiceResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'image' => new ImageResource($this->whenLoaded('image'))
+            'image' => new ImageResource($this->whenLoaded('image')),
         ];
     }
 }
