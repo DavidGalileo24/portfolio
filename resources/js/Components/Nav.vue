@@ -13,6 +13,9 @@ defineProps({});
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Inicio</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Proyectos</Link>
             <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Servicios</Link>
+            <font-awesome-icon :icon="['fab', 'github']" class="text-2xl mx-1" />
+            <font-awesome-icon :icon="['fab', 'linkedin']" class="text-2xl mx-1" />
+            <font-awesome-icon :icon="['fab', 'instagram']" class="text-2xl mx-1" />
         </div>
     </div>
 </template>
