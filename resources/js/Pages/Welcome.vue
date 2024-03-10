@@ -1,12 +1,13 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import Nav from '@/Components/Nav.vue';
 
 defineProps({});
 </script>
 
 <template>
-    <Head title="Welcome" />
-    <div>Lorem</div>
+    <Head title="David Salgado | Desarrollador web" />
+    <Nav />
 </template>
 
 <style scoped></style>

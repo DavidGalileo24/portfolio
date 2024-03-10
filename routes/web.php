@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,6 +24,16 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
+
+    //Project
+    Route::controller(ProjectController::class)->group(function(){
+        Route::get('/projects')->name('projects');
+    });
+
+    //Services
+    Route::controller(ServiceController::class)->group(function(){
+        Route::get('/services')->name('services');
+    });
 });
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
