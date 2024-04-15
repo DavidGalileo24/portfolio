@@ -10,10 +10,14 @@ defineProps({});
 <template>
     <Head title="David Salgado | Desarrollador web" />
     <Nav />
-    <div class="w-full text-white">
-        <h1 class="text-5xl text-center">David Salgado</h1>
-        <SecondaryButton>Descargar CV</SecondaryButton>
-        <PrimaryButton>Descargar CV</PrimaryButton>
+    <div class="w-full text-white mt-20 p-20">
+        <h3 class="text-2xl">Hi! I'm</h3>
+        <h1 class="text-5xl">David Salgado</h1>
+        <p>FullStack developer and freelancer</p>
+        <div class="flex justify-start mt-5">
+            <SecondaryButton class="m-1">Descargar CV</SecondaryButton>
+            <PrimaryButton class="m-1">Descargar CV</PrimaryButton>
+        </div>
     </div>
 </template>
 
