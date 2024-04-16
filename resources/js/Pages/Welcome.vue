@@ -16,7 +16,7 @@ defineProps({});
         <p>FullStack developer and freelancer</p>
         <div class="flex justify-start mt-5">
             <SecondaryButton class="m-1">Descargar CV</SecondaryButton>
-            <PrimaryButton class="m-1">Descargar CV</PrimaryButton>
+            <PrimaryButton class="m-1">Portfolio</PrimaryButton>
         </div>
     </div>
 </template>
