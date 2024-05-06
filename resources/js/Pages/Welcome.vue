@@ -8,7 +8,7 @@ defineProps({});
 </script>
 
 <template>
-    <Head title="David Salgado | Desarrollador web" />
+    <Head title="Inicio | Desarrollador web" />
     <Nav />
     <div class="w-full text-white flex justify-center items-center" style="height: 90vh;">
         <div class="text-center">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Foundation\Application;
@@ -33,6 +34,11 @@ Route::get('/', function () {
     //Services
     Route::controller(ServiceController::class)->group(function(){
         Route::get('/services')->name('services');
+    });
+
+    //BLog
+    Route::controller(BlogController::class)->group(function(){
+        Route::get('/blog')->name('blog');
     });
 });
 
