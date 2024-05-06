@@ -8,11 +8,12 @@ use Inertia\Inertia;
 
 class ProjectController extends Controller
 {
-    
-    public function index(){
+    public function index()
+    {
         $data = Project::orderBy('id', 'desc')->get();
-        return Inertia::render('projects', [
-            'projects' => ProjectResource::collection($data)
+
+        return Inertia::render('Project/Index', [
+            'projects' => ProjectResource::collection($data),
         ]);
     }
 }

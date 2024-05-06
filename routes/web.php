@@ -27,17 +27,17 @@ Route::get('/', function () {
     ]);
 
     //Project
-    Route::controller(ProjectController::class)->group(function(){
+    Route::controller(ProjectController::class)->group(function () {
         Route::get('/projects')->name('projects');
     });
 
     //Services
-    Route::controller(ServiceController::class)->group(function(){
+    Route::controller(ServiceController::class)->group(function () {
         Route::get('/services')->name('services');
     });
 
     //BLog
-    Route::controller(BlogController::class)->group(function(){
+    Route::controller(BlogController::class)->group(function () {
         Route::get('/blog')->name('blog');
     });
 });
