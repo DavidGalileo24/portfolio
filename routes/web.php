@@ -19,9 +19,10 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-    ]);
+    return Inertia::render('Welcome');
+});
+Route::get('/admin/login', function () {
+    return Inertia::render('Auth/Login');
 });
 //Project
 Route::controller(ProjectController::class)->group(function () {

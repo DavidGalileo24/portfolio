@@ -14,10 +14,10 @@ defineProps({});
     <div class="w-full text-white flex justify-center items-center bg1" style="height: 89vh;">
         <div class="text-center">
             <h1 class="great-vibes-regular" style="font-size: 5rem;">
-                <span class="text-teal-500 font-semibold">David</span>
+                <span class="text-purple-500 font-semibold">David</span>
                 <span class=" font-semibold">Salgado</span>
             </h1>
-            <p class="text-xl">Desarrollador web FullStack y desarrollador freelancer</p>
+            <p class="text-xl">Desarrollador web FullStack, freelancer, autodidacta, michilover, entrenador pokemon</p>
             <div class="flex justify-center mt-5">
                 <SecondaryButton class="m-1">Curriculum Vitae</SecondaryButton>
                 <PrimaryButton class="m-1">Portfolio</PrimaryButton>
