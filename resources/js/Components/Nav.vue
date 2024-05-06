@@ -7,7 +7,10 @@ defineProps({});
 <template>
     <div class="bg-gray-950 border-b-2 border-teal-500 p-4 text-white flex">
         <div class="w-1/4">
-            logo
+            <h1 class="great-vibes-regular text-2xl">
+                <span class="text-teal-500">David</span> 
+                <span class="">Salgado</span>
+            </h1>
         </div>
         <div class="text-center w-2/4">
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Inicio</Link>
