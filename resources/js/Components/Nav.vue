@@ -5,11 +5,11 @@ defineProps({});
 </script>
 
 <template>
-    <div class="bg-gray-950 border-b-2 border-teal-500 p-4 text-white flex">
+    <div class="bg-white border-b-2 border-teal-500 p-4 flex ">
         <div class="w-1/4">
             <h1 class="great-vibes-regular text-2xl">
                 <span class="text-teal-500">David</span> 
-                <span class="">Salgado</span>
+                <span class=" font-semibold">Salgado</span>
             </h1>
         </div>
         <div class="text-center w-2/4">
@@ -20,9 +20,15 @@ defineProps({});
             
         </div>
         <div class="w-1/4 text-center">
-            <font-awesome-icon :icon="['fab', 'github']" class="text-2xl mx-2" />
-            <font-awesome-icon :icon="['fab', 'linkedin']" class="text-2xl mx-2" />
-            <font-awesome-icon :icon="['fab', 'instagram']" class="text-2xl mx-2" />
+            <Link href="https://github.com/DavidGalileo24">
+                <font-awesome-icon :icon="['fab', 'github']" class="text-3xl mx-1 text-sky-700" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/david-galileo-salgado-mej%C3%ADa-b1a07b128/">
+                <font-awesome-icon :icon="['fab', 'linkedin']" class="text-3xl mx-1 text-sky-700" />
+            </Link>
+            <Link href="https://www.instagram.com/david_galileo24/?hl=es">
+                <font-awesome-icon :icon="['fab', 'instagram']" class="text-3xl mx-1 text-sky-700" />
+            </Link>
         </div>
     </div>
 </template>
