@@ -13,7 +13,7 @@ class BlogController extends Controller
         $data = Blog::orderBy('id', 'desc')->get();
 
         return Inertia::render('Blog/Index', [
-            'Blogs' => BlogResource::collection($data),
+            'blogs' => BlogResource::collection($data),
         ]);
     }
 }

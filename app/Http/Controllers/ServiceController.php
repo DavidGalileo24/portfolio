@@ -12,8 +12,8 @@ class ServiceController extends Controller
     {
         $data = Service::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Service/Index', [
-            'Services' => ServiceResource::collection($data),
+        return Inertia::render('Services/Index', [
+            'services' => ServiceResource::collection($data),
         ]);
     }
 }

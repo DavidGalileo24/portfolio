@@ -21,25 +21,21 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
+});
+//Project
+Route::controller(ProjectController::class)->group(function () {
+    Route::get('/projects', 'index')->name('projects');
+});
 
-    //Project
-    Route::controller(ProjectController::class)->group(function () {
-        Route::get('/projects')->name('projects');
-    });
+//Services
+Route::controller(ServiceController::class)->group(function () {
+    Route::get('/services', 'index')->name('services');
+});
 
-    //Services
-    Route::controller(ServiceController::class)->group(function () {
-        Route::get('/services')->name('services');
-    });
-
-    //BLog
-    Route::controller(BlogController::class)->group(function () {
-        Route::get('/blog')->name('blog');
-    });
+//BLog
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/blog', 'index')->name('blog');
 });
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {

@@ -12,7 +12,7 @@ class ProjectController extends Controller
     {
         $data = Project::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Project/Index', [
+        return Inertia::render('Projects/Index', [
             'projects' => ProjectResource::collection($data),
         ]);
     }
