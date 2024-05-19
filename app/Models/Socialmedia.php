@@ -20,4 +20,9 @@ class Socialmedia extends Model
     {
         return $this->morphOne(Link::class, 'linkeable');
     }
+
+    public function aboutme()
+    {
+        return $this->hasMany(Aboutme::class);
+    }
 }

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('aboutmes', function (Blueprint $table) {
             $table->id();
+            $table->string('description');
+            $table->foreignId('technology_id')->constrained();
+            $table->foreignId('socialmedia_id')->constrained();
+            $table->foreignId('company_id')->constrained();
+            $table->foreignId('service_id')->constrained();
             $table->timestamps();
         });
     }

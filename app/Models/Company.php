@@ -15,4 +15,9 @@ class Company extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
+
+    public function aboutme()
+    {
+        return $this->hasMany(Aboutme::class);
+    }
 }
