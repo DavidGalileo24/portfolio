@@ -40,7 +40,7 @@ const submit = () => {
             </div>
             <form @submit.prevent="submit">
                 <AuthenticationCardLogo />
-                <div class="mt-5">
+                <div class="mt-7">
                     <InputLabel for="email" value="Email" />
                     <TextInput id="email" v-model="form.email" type="email" class="mt-1 block w-full" required autofocus
                         autocomplete="username" />

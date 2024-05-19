@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 Route::get('/login', function () {
     return Inertia::render('Auth/Login');
-});
+})->name('login');
 
 Route::controller(ViewController::class)->group(function () {
     //Project
