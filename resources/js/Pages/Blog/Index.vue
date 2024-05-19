@@ -8,7 +8,7 @@ defineProps({});
 </script>
 
 <template>
-    <Head title="Blog | Desarrollador web" />
+    <Head title="Blog" />
     <Nav />
     Blog
 </template>

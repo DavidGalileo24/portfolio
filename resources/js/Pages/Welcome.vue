@@ -9,7 +9,7 @@ defineProps({});
 
 <template>
 
-    <Head title="Inicio | Desarrollador web" />
+    <Head title="Inicio" />
     <Nav />
     <div class="w-full text-white flex justify-center items-center bg1" style="height: 89vh;">
         <div class="text-center">
@@ -28,7 +28,7 @@ defineProps({});
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img2.png') !important;
+    background-image: url('/images/img1.png') !important;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100%;
