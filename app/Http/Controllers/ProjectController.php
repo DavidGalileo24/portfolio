@@ -18,19 +18,24 @@ class ProjectController extends Controller
         ]);
     }
 
-
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         Project::create($request->all);
+
         return redirect()->route('admin.projects');
     }
 
-    public function update(Request $request, Project $project){
+    public function update(Request $request, Project $project)
+    {
         $project->update($request->all());
+
         return redirect()->route('admin.projects');
     }
 
-    public function destroy(Project $project){
+    public function destroy(Project $project)
+    {
         $project->delete();
+
         return redirect()->route('admin.projects');
     }
 }

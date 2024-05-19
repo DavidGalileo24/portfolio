@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,7 +25,13 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return Inertia::render('Auth/Login');
 });
-//Project
+
+Route::controller(ViewController::class)->group(function () {
+    //Project
+    Route::post('/projects', 'allProjects')->name('projects');
+});
+
+//admin
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
@@ -33,7 +40,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::controller(ProjectController::class)->group(function () {
         Route::get('/projects', 'index')->name('admin.projects');
         Route::post('/projects', 'store')->name('admin.projects.store');
-        Route::update('/projects/{project}', 'update')->name('admin.projects.update');
+        Route::put('/projects/{project}', 'update')->name('admin.projects.update');
         Route::delete('/projects/{project}', 'destroy')->name('admin.projects.delete');
     });
 
