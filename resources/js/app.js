@@ -5,13 +5,15 @@ import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import { createPinia } from 'pinia'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub,faLinkedin,faInstagram, } from '@fortawesome/free-brands-svg-icons'
 library.add(faGithub,faLinkedin,faInstagram, )
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'Portfolio';
+const pinia = createPinia()
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -19,6 +21,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .component('font-awesome-icon', FontAwesomeIcon)
+            .use(pinia)
             .use(plugin)
             .use(ZiggyVue)
             .mount(el);

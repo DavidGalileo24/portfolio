@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\BlogResource;
+use App\Http\Resources\AboutmeResource;
 use App\Models\Aboutme;
 use Inertia\Inertia;
 
@@ -13,7 +13,7 @@ class ViewController extends Controller
         $data = Aboutme::orderBy('id', 'desc')->get();
 
         return Inertia::render('Dashboard', [
-            'aboutme' => BlogResource::collection($data),
+            'aboutme' => AboutmeResource::collection($data),
         ]);
     }
 }
