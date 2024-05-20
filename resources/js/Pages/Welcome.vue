@@ -4,7 +4,11 @@ import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
-defineProps({});
+defineProps({
+    aboutme: {
+        type: Object,
+    }
+});
 </script>
 
 <template>
@@ -17,7 +21,7 @@ defineProps({});
                 <span class="text-purple-500 font-semibold">David</span>
                 <span class=" font-semibold">Salgado</span>
             </h1>
-            <p class="text-xl">Desarrollador web FullStack, freelancer, autodidacta, michilover, entrenador pokemon</p>
+            <p class="text-xl">Desarrollador web FullStack, freelancer, autodidacta</p>
             <div class="flex justify-center mt-5">
                 <SecondaryButton class="m-1">Curriculum Vitae</SecondaryButton>
                 <PrimaryButton class="m-1">Portfolio</PrimaryButton>
@@ -28,7 +32,7 @@ defineProps({});
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img1.png') !important;
+    background-image: url('/images/img2.png') !important;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100%;

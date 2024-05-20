@@ -21,5 +21,6 @@
     </head>
     <body class="font-sans antialiased bg-gray-950">
         @inertia
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </body>
 </html>

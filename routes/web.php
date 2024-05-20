@@ -26,14 +26,11 @@ Route::get('/login', function () {
     return Inertia::render('Auth/Login');
 })->name('login');
 
-Route::controller(ViewController::class)->group(function () {
-    //Project
-    Route::post('/projects', 'allProjects')->name('projects');
-});
+
 
 //admin
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/dashboard', function () {                                                                                                                                                                                                                                          
         return Inertia::render('Dashboard');
     })->name('dashboard');
 

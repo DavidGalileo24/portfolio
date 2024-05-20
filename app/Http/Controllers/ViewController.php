@@ -12,7 +12,7 @@ class ViewController extends Controller
     {
         $data = Aboutme::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Dashboard', [
+        return Inertia::render('Welcome', [
             'aboutme' => AboutmeResource::collection($data),
         ]);
     }
