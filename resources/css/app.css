@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '/node_modules/flowbite-vue/dist/index.css';
 
 .raleway {
     font-family: "Raleway", sans-serif;

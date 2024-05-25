@@ -15,7 +15,7 @@ defineProps({
 
     <Head title="Inicio" />
     <Nav />
-    <div class="w-full text-white flex justify-center items-center bg1" style="height: 89vh;">
+    <div class="w-full text-white border-b-2 border-gray-900 flex justify-center items-center bg1" style="height: 89vh;">
         <div class="text-center">
             <h1 class="great-vibes-regular" style="font-size: 5rem;">
                 <span class="text-purple-500 font-semibold">David</span>
@@ -32,9 +32,10 @@ defineProps({
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img2.png') !important;
-    background-position: top center;
+    background-image: url('/images/img4.png') !important;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 </style>

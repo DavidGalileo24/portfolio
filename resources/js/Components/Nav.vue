@@ -5,7 +5,7 @@ defineProps({});
 </script>
 
 <template>
-    <div class="bg-black border-b-2 border-purple-500 p-4 flex text-white">
+    <div class="bg-black border-b-2 border-gray-800 p-4 flex text-white">
         <div class="w-1/4">
             <h1 class="great-vibes-regular text-2xl">
                 <span class="text-purple-500">David</span> 
