@@ -32,7 +32,7 @@ defineProps({
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img4.png') !important;
+    background-image: url('/images/img5.png') !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
