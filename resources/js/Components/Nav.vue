@@ -5,7 +5,7 @@ defineProps({});
 </script>
 
 <template>
-    <div class="bg-transparent border-b-2 border-gray-800 p-4 flex text-white">
+    <div class="p-4 flex text-gray-900 text-white" style="background: transparent !important;">
         <div class="w-1/4">
             <h1 class="great-vibes-regular text-2xl">
                 <span class="text-purple-500">David</span> 
@@ -23,13 +23,13 @@ defineProps({});
         </div>
         <div class="w-1/4 text-center">
             <Link href="https://github.com/DavidGalileo24">
-                <font-awesome-icon :icon="['fab', 'github']" class="text-3xl mx-1 text-purple-300" />
+                <font-awesome-icon :icon="['fab', 'github']" class="text-3xl mx-1 text-purple-600" />
             </Link>
             <Link href="https://www.linkedin.com/in/david-galileo-salgado-mej%C3%ADa-b1a07b128/">
-                <font-awesome-icon :icon="['fab', 'linkedin']" class="text-3xl mx-1 text-purple-300" />
+                <font-awesome-icon :icon="['fab', 'linkedin']" class="text-3xl mx-1 text-purple-600" />
             </Link>
             <Link href="https://www.instagram.com/david_galileo24/?hl=es">
-                <font-awesome-icon :icon="['fab', 'instagram']" class="text-3xl mx-1 text-purple-300" />
+                <font-awesome-icon :icon="['fab', 'instagram']" class="text-3xl mx-1 text-purple-600" />
             </Link>
         </div>
     </div>
