@@ -5,8 +5,8 @@ defineProps({});
 </script>
 
 <template>
-    <div class="p-4 flex text-gray-900 text-white" style="background: transparent !important;">
-        <div class="w-1/4">
+    <div class="p-4 flex text-white" style="background: transparent !important;">
+        <div class="w-1/4 text-center">
             <h1 class="great-vibes-regular text-2xl">
                 <span class="text-purple-500">David</span> 
                 <span class=" font-semibold">Salgado</span>
@@ -16,9 +16,9 @@ defineProps({});
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Inicio</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Portfolio</Link>
             <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Servicios</Link>
-            <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Sobre mí</Link>
-            <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Contáctame</Link>
+            <Link href="/about-me" class="mx-4" :class="{'active': $page.url==='/about-me'}">Sobre mí</Link>
             <Link href="/blog" class="mx-4" :class="{'active': $page.url==='/blog'}">Blog</Link>
+            <Link href="/contact" class="mx-4" :class="{'active': $page.url==='/contact'}">Contáctame</Link>
             
         </div>
         <div class="w-1/4 text-center">

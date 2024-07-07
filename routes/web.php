@@ -26,6 +26,14 @@ Route::get('/login', function () {
     return Inertia::render('Auth/Login');
 })->name('login');
 
+Route::controller(ViewController::class)->group(function(){
+    Route::get('/projects', 'allProjects')->name('projects');
+    Route::get('/services', 'allServices')->name('services');
+    Route::get('/about-me', 'allAboutme')->name('aboutme');
+    Route::get('/blog', 'allBlogs')->name('blog');
+    Route::get('/contact', 'allContact')->name('contact');
+});
+
 
 
 //admin
@@ -43,11 +51,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
     //Services
     Route::controller(ServiceController::class)->group(function () {
-        Route::get('/services', 'index')->name('services');
+        Route::get('/services', 'index')->name('admin.services');
     });
 
     //Blog
     Route::controller(BlogController::class)->group(function () {
-        Route::get('/blog', 'index')->name('blog');
+        Route::get('/blog', 'index')->name('admin.blog');
     });
 });
