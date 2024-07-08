@@ -1,13 +1,13 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Social from '@/Components/Social.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
 
-const typedStrings = ['FullStack developer', 'Frontend developer', 'Backend developer', 'Freelancer', 'Autodidact', 'Web designer'];
+const typedStrings = ["I'm David Salgado", 'Lives In San Salvador', 'FullStack Developer', 'Frontend Developer', 'Backend Developer', 'Freelancer', 'Autodidact', 'Web Designer'];
 defineProps({
     aboutme: {
         type: Object,
@@ -39,21 +39,20 @@ const alert = () => {
         <Nav />
         <div class="flex justify-evenly items-center h-4/5">
             <div class="w-1/2 text-white flex justify-center">
-                <div class="">
-                    <h2 class="text-5xl font-bold">Hi, I'm <span class="text-purple-500">David</span> Salgado</h2>
+                <div class="text-center">
+                    <div class="text-md bg-purple-500 w-32 mx-auto rounded-md">Hello There!</div>
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="30" :loop="true"
-                        class="text-2xl text-gray-200" />
-                    <div class="flex justify-start mt-7">
-                        <SecondaryButton class="m-1">
-                            <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-                        </SecondaryButton>
-                        <PrimaryButton class="m-1">
+                        class="text-5xl font-bold text-gray-200" />
+                    <div class="flex justify-center mt-10">
+                        <Social />
+                        
+                        <!--<PrimaryButton class="m-1">
                             <font-awesome-icon :icon="['fas', 'briefcase']" class="mr-2" />Portfolio
-                        </PrimaryButton>
+                        </PrimaryButton>-->
                     </div>
                 </div>
             </div>
-            <div class="w-1/2">
+            <!--<div class="w-1/2">
                 <form class="p-5 rounded-lg bg-white w-2/3 mx-auto" @submit.prevent="sendEmail()">
                     <h2 class="text-3xl font-semibold">Contact me here!</h2>
                     <div class="mt-5">
@@ -75,7 +74,7 @@ const alert = () => {
                         </PrimaryButton>
                     </div>
                 </form>
-            </div>
+            </div>-->
         </div>
     </div>
 </template>
