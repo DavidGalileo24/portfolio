@@ -26,6 +26,7 @@
         "flowbite": "^2.3.0",
         "flowbite-vue": "^0.1.4",
         "pinia": "^2.1.7",
+        "vue-sweetalert2": "^5.0.11",
         "vue3-typed-js": "^0.0.1"
     }
 }

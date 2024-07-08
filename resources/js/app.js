@@ -7,13 +7,15 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { createPinia } from 'pinia'
 import VueTyped from 'vue3-typed-js';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 import '/node_modules/flowbite-vue/dist/index.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub,faLinkedin,faInstagram, } from '@fortawesome/free-brands-svg-icons'
-import { faDownload,faBriefcase,faHandPeace,} from '@fortawesome/free-solid-svg-icons'
-library.add(faGithub,faLinkedin,faInstagram,faDownload,faBriefcase,faHandPeace, )
+import { faDownload,faBriefcase,faHandPeace,faPaperPlane,} from '@fortawesome/free-solid-svg-icons'
+library.add(faGithub,faLinkedin,faInstagram,faDownload,faBriefcase,faHandPeace,faPaperPlane, )
 
 const appName = import.meta.env.VITE_APP_NAME || 'Portfolio';
 const pinia = createPinia()
@@ -26,6 +28,7 @@ createInertiaApp({
             .component('font-awesome-icon', FontAwesomeIcon)
             .use(pinia)
             .use(plugin)
+            .use(VueSweetalert2)
             .use(VueTyped)
             .use(ZiggyVue)
             .mount(el);
