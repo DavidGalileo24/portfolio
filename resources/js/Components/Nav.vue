@@ -10,11 +10,11 @@ defineProps({});
     <div class="p-4 flex justify-around items-center text-white" style="background: transparent !important;">
         <div class="w-1/4">
             <h1 class="great-vibes-regular text-3xl mx-2">
-                <span class="text-purple-500">David</span> 
+                <span class="text-sky-500">David</span> 
                 <span class="font-semibold">Salgado</span>
             </h1>
         </div>
-        <div class="w-3/4 flex items-center justify-end">
+        <div class="w-3/4 flex items-center justify-end font-semibold">
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Inicio</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Portfolio</Link>
             <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Servicios</Link>
@@ -29,7 +29,7 @@ defineProps({});
 </template>
 <style scoped>
     .active{
-        border-bottom: 2px solid #7743DB;
+        border-bottom: 2px solid #3d96ca;
         padding-bottom: 2px;
     }
 </style>

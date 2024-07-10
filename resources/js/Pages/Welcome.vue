@@ -40,9 +40,9 @@ const alert = () => {
         <div class="flex justify-evenly items-center h-4/5">
             <div class="w-1/2 text-white flex justify-center">
                 <div class="text-center">
-                    <div class="text-md bg-purple-500 w-32 mx-auto rounded-md">Hello There!</div>
+                    <div class="text-md bg-sky-500 w-32 mx-auto rounded-md">Hello There!</div>
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="30" :loop="true"
-                        class="text-5xl font-bold text-gray-200" />
+                        class="text-7xl font-bold text-gray-200" />
                     <div class="flex justify-center mt-10">
                         <Social />
                         
@@ -81,7 +81,7 @@ const alert = () => {
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img5.png') !important;
+    background-image: url('/images/img7.png') !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
