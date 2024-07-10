@@ -41,7 +41,7 @@ const alert = () => {
             <div class="w-1/2 text-white flex justify-center">
                 <div class="text-center">
                     <div class="text-md bg-sky-500 w-32 mx-auto rounded-md">Hello There!</div>
-                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="30" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
+                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
                         <Social />
                         

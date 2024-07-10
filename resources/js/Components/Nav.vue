@@ -1,6 +1,5 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
-import Social from './Social.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 defineProps({});
