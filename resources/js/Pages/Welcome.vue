@@ -41,8 +41,7 @@ const alert = () => {
             <div class="w-1/2 text-white flex justify-center">
                 <div class="text-center">
                     <div class="text-md bg-sky-500 w-32 mx-auto rounded-md">Hello There!</div>
-                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="30" :loop="true"
-                        class="text-7xl font-bold text-gray-200" />
+                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="30" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
                         <Social />
                         
@@ -81,10 +80,16 @@ const alert = () => {
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img7.png') !important;
+    background-image: url('/images/img10.png') !important;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-attachment: fixed;
+}
+.transtitle{
+    height: 100px;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
 }
 </style>

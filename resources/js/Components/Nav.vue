@@ -1,7 +1,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import Social from './Social.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 defineProps({});
 </script>
@@ -15,15 +15,15 @@ defineProps({});
             </h1>
         </div>
         <div class="w-3/4 flex items-center justify-end font-semibold">
-            <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Inicio</Link>
+            <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Home</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Portfolio</Link>
-            <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Servicios</Link>
-            <Link href="/about-me" class="mx-4" :class="{'active': $page.url==='/about-me'}">Sobre mí</Link>
+            <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Services</Link>
+            <Link href="/about-me" class="mx-4" :class="{'active': $page.url==='/about-me'}">About me</Link>
             <Link href="/blog" class="mx-4" :class="{'active': $page.url==='/blog'}">Blog</Link>
-            <Link href="/contact" class="mx-4" :class="{'active': $page.url==='/contact'}">Contáctame</Link>
-            <SecondaryButton class="mx-4">
+            <Link href="/contact" class="mx-4" :class="{'active': $page.url==='/contact'}">Contact</Link>
+            <PrimaryButton class="mx-4">
                 <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-            </SecondaryButton>
+            </PrimaryButton>
         </div>
     </div>
 </template>
