@@ -23,9 +23,13 @@
         "@fortawesome/free-regular-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "@fortawesome/vue-fontawesome": "^3.0.6",
+        "filepond": "^4.31.1",
+        "filepond-plugin-image-preview": "^4.6.12",
+        "floating-vue": "^5.2.2",
         "flowbite": "^2.3.0",
         "flowbite-vue": "^0.1.4",
         "pinia": "^2.1.7",
+        "vue-filepond": "^7.0.4",
         "vue-sweetalert2": "^5.0.11",
         "vue3-typed-js": "^0.0.1"
     }

@@ -4,7 +4,8 @@ namespace App\Enums;
 
 enum TechTypeEnum: string
 {
-    case Languaje = 'languaje';
-    case Framework = 'framework';
-    case SGBD = 'sgbd';
+    case LANGUAJE = 'Languaje';
+    case FRAMEWORK = 'Framework';
+    case DATABASE = 'Database';
+    case OTHER = 'Other';
 }

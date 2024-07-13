@@ -286,7 +286,6 @@ const logout = () => {
             <div class="w-full flex justify-start">
                 <Sidebar />
                 <div class="w-4/5">
-
                     <main>
                         <slot />
                     </main>

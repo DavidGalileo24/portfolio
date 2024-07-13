@@ -8,8 +8,10 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { createPinia } from 'pinia'
 import VueTyped from 'vue3-typed-js';
 import VueSweetalert2 from 'vue-sweetalert2';
+import FloatingVue from 'floating-vue'
 import 'sweetalert2/dist/sweetalert2.min.css';
 import '/node_modules/flowbite-vue/dist/index.css'
+import 'floating-vue/dist/style.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -29,6 +31,7 @@ createInertiaApp({
             .use(pinia)
             .use(plugin)
             .use(VueSweetalert2)
+            .use(FloatingVue)
             .use(VueTyped)
             .use(ZiggyVue)
             .mount(el);
