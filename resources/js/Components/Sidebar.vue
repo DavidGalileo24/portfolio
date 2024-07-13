@@ -1,5 +1,6 @@
 <script setup>
 import { FwbSidebar, FwbSidebarItem } from 'flowbite-vue'
+import { Link } from '@inertiajs/vue3';
 
 </script>
 <template>

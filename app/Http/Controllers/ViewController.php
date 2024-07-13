@@ -22,6 +22,7 @@ class ViewController extends Controller
             'projects' => ProjectResource::collection($data),
         ]);
     }
+
     public function allAboutme()
     {
         $data = Aboutme::orderBy('id', 'desc')->get();
@@ -30,7 +31,7 @@ class ViewController extends Controller
             'aboutme' => AboutmeResource::collection($data),
         ]);
     }
-    
+
     public function allServices()
     {
         $data = Service::orderBy('id', 'desc')->get();
@@ -39,6 +40,7 @@ class ViewController extends Controller
             'services' => ServiceResource::collection($data),
         ]);
     }
+
     public function allBlogs()
     {
         $data = Blog::orderBy('id', 'desc')->get();
@@ -47,6 +49,7 @@ class ViewController extends Controller
             'blogs' => BlogResource::collection($data),
         ]);
     }
+
     public function allContact()
     {
         return response()->json('test');

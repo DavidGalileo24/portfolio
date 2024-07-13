@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TechnologieController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,7 @@ Route::get('/login', function () {
     return Inertia::render('Auth/Login');
 })->name('login');
 
-Route::controller(ViewController::class)->group(function(){
+Route::controller(ViewController::class)->group(function () {
     Route::get('/projects', 'allProjects')->name('projects');
     Route::get('/services', 'allServices')->name('services');
     Route::get('/about-me', 'allAboutme')->name('aboutme');
@@ -34,11 +35,9 @@ Route::controller(ViewController::class)->group(function(){
     Route::get('/contact', 'allContact')->name('contact');
 });
 
-
-
 //admin
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {                                                                                                                                                                                                                                          
+    Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
@@ -52,6 +51,14 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     //Services
     Route::controller(ServiceController::class)->group(function () {
         Route::get('/services', 'index')->name('admin.services');
+    });
+
+    //Technologies
+    Route::controller(TechnologieController::class)->group(function () {
+        Route::get('/technologies', 'index')->name('admin.tech');
+        Route::post('/technologies', 'store')->name('admin.tech.store');
+        Route::put('/technologies/{technology}', 'update')->name('admin.tech.update');
+        Route::delete('/technologies/{technology}', 'destroy')->name('admin.tech.delete');
     });
 
     //Blog
