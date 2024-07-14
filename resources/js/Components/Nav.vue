@@ -13,16 +13,13 @@ defineProps({});
                 <span class="font-semibold">Salgado</span>
             </h1>
         </div>
-        <div class="w-3/4 flex items-center justify-end font-semibold">
+        <div class="w-3/4 flex items-center justify-end">
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Home</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Portfolio</Link>
             <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Services</Link>
             <Link href="/about-me" class="mx-4" :class="{'active': $page.url==='/about-me'}">About me</Link>
             <Link href="/blog" class="mx-4" :class="{'active': $page.url==='/blog'}">Blog</Link>
             <Link href="/contact" class="mx-4" :class="{'active': $page.url==='/contact'}">Contact</Link>
-            <PrimaryButton class="mx-4">
-                <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-            </PrimaryButton>
         </div>
     </div>
 </template>

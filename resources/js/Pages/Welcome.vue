@@ -13,21 +13,17 @@ defineProps({
         type: Object,
     }
 });
-const sendEmail = () => {
+const downloadcv = () => {
     alert();
 }
 const alert = () => {
     Swal.fire({
         icon: 'success',
-        text: 'Test',
-        target: '#custom-target',
-        customClass: {
-            container: 'position-absolute'
-        },
+        text: 'Curriculum vitae download successfully!',
         toast: true,
-        position: 'bottom-left',
+        position: 'bottom-right',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 3500,
         timerProgressBar: true
     });
 } 
@@ -37,19 +33,24 @@ const alert = () => {
     <Head title="Inicio" />
     <div style="height: 100vh;" class="bg1">
         <Nav />
-        <div class="flex justify-evenly items-center h-4/5">
-            <div class="w-1/2 text-white flex justify-center">
+        <div class="flex justify-center items-center h-4/5 w-full">
+            <div class="w-1/6">
+                <Social />
+            </div>
+            <div class="w-2/3 text-white flex justify-center">
                 <div class="text-center">
-                    <div class="text-md bg-sky-500 w-32 mx-auto rounded-md">Hello There!</div>
+                    <div class="text-xl mx-auto rounded-mdxl">Hello There!</div>
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
-                        <Social />
-                        
-                        <!--<PrimaryButton class="m-1">
-                            <font-awesome-icon :icon="['fas', 'briefcase']" class="mr-2" />Portfolio
-                        </PrimaryButton>-->
+                        <!--<Social />-->
+                        <PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()">
+                            <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
+                        </PrimaryButton>
                     </div>
                 </div>
+            </div>
+            <div class="w-1/6">
+
             </div>
             <!--<div class="w-1/2">
                 <form class="p-5 rounded-lg bg-white w-2/3 mx-auto" @submit.prevent="sendEmail()">
@@ -87,7 +88,7 @@ const alert = () => {
     background-attachment: fixed;
 }
 .transtitle{
-    height: 100px;
+    height: 50px;
     font-weight: 700;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
