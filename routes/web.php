@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TechnologieController;
 use App\Http\Controllers\ViewController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,28 +42,27 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::controller(ProjectController::class)->group(function () {
-        Route::get('/projects', 'index')->name('admin.projects');
-        Route::post('/projects', 'store')->name('admin.projects.store');
-        Route::put('/projects/{project}', 'update')->name('admin.projects.update');
-        Route::delete('/projects/{project}', 'destroy')->name('admin.projects.delete');
-    });
+    Route::resource('/projects', ProjectController::class)
+            ->names(['index'=>'admin.projects','store'=>'admin.projects.store','update'=>'admin.projects.update','destroy'=>'admin.projects.delete'])
+            ->except(['create','edit']);
 
     //Services
-    Route::controller(ServiceController::class)->group(function () {
-        Route::get('/services', 'index')->name('admin.services');
-    });
+    Route::resource('/services', ServiceController::class)
+            ->names(['index'=>'admin.services','store'=>'admin.services.store','update'=>'admin.services.update','destroy'=>'admin.services.delete'])
+            ->except(['create','edit']);
 
     //Technologies
-    Route::controller(TechnologieController::class)->group(function () {
-        Route::get('/technologies', 'index')->name('admin.tech');
-        Route::post('/technologies', 'store')->name('admin.tech.store');
-        Route::put('/technologies/{technology}', 'update')->name('admin.tech.update');
-        Route::delete('/technologies/{technology}', 'destroy')->name('admin.tech.delete');
-    });
+    Route::resource('/technologies', TechnologieController::class)
+            ->names(['index'=>'admin.tech','store'=>'admin.tech.store','update'=>'admin.tech.update','destroy'=>'admin.tech.delete'])
+            ->except(['create','edit']);
 
     //Blog
-    Route::controller(BlogController::class)->group(function () {
-        Route::get('/blog', 'index')->name('admin.blog');
-    });
+    Route::resource('/blog', BlogController::class)
+            ->names(['index'=>'admin.blog','store'=>'admin.blog.store','update'=>'admin.blog.update','destroy'=>'admin.blog.delete'])
+            ->except(['create','edit']);
+
+    //Company
+    Route::resource('/companies', CompanyController::class)
+            ->names(['index'=>'admin.company','store'=>'admin.company.store','update'=>'admin.company.update','destroy'=>'admin.company.delete'])
+            ->except(['create','edit']);
 });
