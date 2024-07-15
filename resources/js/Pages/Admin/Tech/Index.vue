@@ -58,24 +58,28 @@ const handleFile = (e) => {
     reader.readAsDataURL(image);
 }
 </script>
-
 <template>
     <AppLayout title="Technologies">
-        <div class="bg-gray-800 overflow-hidden my-3 text-sm">
+        <div class="bg-gray-800 overflow-hidden my-3">
             <div class="w-full flex p-5">
-                <div class="w-1/3">
-                    <form class="p-5 border rounded-lg bg-white" @submit.prevent="storeTech()">
-                        <h2 class="text-2xl font-semibold">Added new technology</h2>
+                <div class="w-1/4">
+                    <form class="p-3 border rounded-lg bg-white" @submit.prevent="storeTech()">
+                        <h2 class="text-xl font-semibold text-center">Added new technology</h2>
+                        <div class="mt-3">
+                            <InputLabel for="image" value="Image" class="text-sm"/>
+                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
+                                max-files="1" />
+                        </div>
                         <div class="mt-5">
-                            <InputLabel for="name" value="Name" />
-                            <TextInput v-model="state.form.name" type="text" class="mt-1 block w-full" autofocus />
+                            <InputLabel for="name" value="Name" class="text-sm" />
+                            <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
                         </div>
                         <div class="mt-3">
-                            <InputLabel for="percentaje" value="Percentaje" />
-                            <TextInput v-model="state.form.percentaje" type="text" class="mt-1 block w-full" />
+                            <InputLabel for="percentaje" value="Percentaje" class="text-sm"/>
+                            <TextInput v-model="state.form.percentaje" type="text" class="block w-full" />
                         </div>
                         <div class="mt-3">
-                            <InputLabel for="type" value="Technology type" />
+                            <InputLabel for="type" value="Technology type" class="text-sm"/>
                             <select v-model="state.form.type"
                                 class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
                                 <option value="Languaje">Languaje</option>
@@ -85,23 +89,22 @@ const handleFile = (e) => {
                             </select>
                         </div>
                         <div class="mt-3">
-                            <InputLabel for="image" value="Image" />
-                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
-                                max-files="1" />
-                        </div>
-                        <div class="mt-3">
                             <PrimaryButton class="m-1 w-full">
-                                <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send
+                                <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send data
                             </PrimaryButton>
                         </div>
                     </form>
                 </div>
-                <div class="w-2/3 flex wrap">
+                <div class="w-3/4 flex flex-wrap justify-center mx-2">
                     <span v-for="tech in tech.data" :key="tech.id">
-                        <fwb-card href="#" class=" m-2">
-                            <div class="p-3">
+                        <fwb-card href="#" class="m-2 mt-0">
+                            <div class="p-2">
                                 <img :src="tech.image.file" alt="logo" class="techlogo">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{tech.name}}</h5>
+                                <h3 class="text-lg font-bold tracking-tight text-center text-gray-900">{{tech.name}}</h3>
+                                <div class="flex justify-evenly mt-3">
+                                    <span class="text-xs bg-black text-white rounded-xl p-1 text-center">{{tech.type}}</span>
+                                    <span>{{tech.percentaje}}%</span>
+                                </div>
                             </div>
                         </fwb-card>
                     </span>
@@ -112,8 +115,10 @@ const handleFile = (e) => {
 </template>
 <style scoped>
     .techlogo{
-        width: 100px;
+        padding: 5px;
+        width: 125px;
         display:block;
         margin:0 auto;
+        border-bottom: 1px solid #dae2eb;
     }
 </style>
