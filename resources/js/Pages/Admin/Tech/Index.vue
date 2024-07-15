@@ -28,7 +28,7 @@ const handleFile=(e)=>{
 
 <template>
     <AppLayout title="Technologies">
-        <div class="bg-white overflow-hidden my-3">
+        <div class="bg-white overflow-hidden my-3 text-sm">
             <div class="w-full flex p-5">     
                 <div class="w-1/3">
                     <form class="p-5 border rounded-lg bg-white" @submit.prevent="sendEmail()">

@@ -4,60 +4,52 @@ import { Link } from '@inertiajs/vue3';
 
 </script>
 <template>
-    <div class="w-1/5 ">
+    <div class="w-1/5 text-sm">
         <fwb-sidebar>
             <!--home-->
-            <Link href="/admin/dashboard" :class="{'active': $page.url==='/dashboard'}">
-                <fwb-sidebar-item>
-                    <template #icon>
-                        <font-awesome-icon :icon="['fas', 'home']" class="text-gray-400" />
-                    </template>
-                    <template #default>Dashboard</template>
+                <fwb-sidebar-item style="width: 100%;display:block">
+                    <Link href="/admin/dashboard" :class="{'active': $page.url==='/admin/dashboard'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'home']" class="text-gray-300 mr-3 text-lg" />Dashboard</template>
+                </Link>
                 </fwb-sidebar-item>
-            </Link>
             <!--projects-->
-            <Link href="/admin/projects" :class="{'active': $page.url==='/projects'}">
                 <fwb-sidebar-item>
-                    <template #icon>
-                        <font-awesome-icon :icon="['fas', 'briefcase']" class="text-gray-400"/>
-                    </template>
-                    <template #default>Projects</template>
+                    <Link href="/admin/projects" :class="{'active': $page.url==='/admin/projects'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'briefcase']" class="text-gray-300 mr-3 text-lg"/>Projects</template>
+                </Link>
                 </fwb-sidebar-item>
-            </Link>
             <!--services-->
-            <Link href="/admin/services" :class="{'active': $page.url==='/services'}">
                 <fwb-sidebar-item>
-                    <template #icon>
-                        <font-awesome-icon :icon="['fas', 'code']" class="text-gray-400" />
-                    </template>
-                    <template #default>Services</template>
+                    <Link href="/admin/services" :class="{'active': $page.url==='/admin/services'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'code']" class="text-gray-300 mr-3 text-lg" />Services</template>
+                </Link>
                 </fwb-sidebar-item>
-            </Link>
             <!--technologies-->
-            <Link href="/admin/technologies" :class="{'active': $page.url==='/technologies'}">
                 <fwb-sidebar-item>
-                    <template #icon>
-                        <font-awesome-icon :icon="['fas', 'terminal']" class="text-gray-400"/>
-                    </template>
-                    <template #default>Technologies</template>
+                    <Link href="/admin/technologies" :class="{'active': $page.url==='/admin/technologies'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'terminal']" class="text-gray-300 mr-3 text-lg"/>Technologies</template>
+                </Link>
                 </fwb-sidebar-item>
-            </Link>
             <!--customers-->
-            <Link href="/admin/company" :class="{'active': $page.url==='/technologies'}">
                 <fwb-sidebar-item>
-                    <template #icon>
-                        <font-awesome-icon :icon="['fas', 'star']" class="text-gray-400" />
-                    </template>
-                    <template #default>Customers</template>
+                    <Link href="/admin/company" :class="{'active': $page.url==='/admin/companies'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'star']" class="text-gray-300  mr-3 text-lg" />Customers</template>
+                </Link>
                 </fwb-sidebar-item>
-            </Link>
             <!--blog-->
-            <fwb-sidebar-item>
-                <template #icon>
-                    <font-awesome-icon :icon="['fas', 'newspaper']" class="text-gray-400" />
-                </template>
-                <template #default>Blog</template>
-            </fwb-sidebar-item>
+                <fwb-sidebar-item>
+                    <Link href="/admin/blog" :class="{'active': $page.url==='/admin/blog'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'newspaper']" class="text-gray-300  mr-3 text-lg" />Blog</template>
+                </Link>
+                </fwb-sidebar-item>
         </fwb-sidebar>
     </div>
 </template>
+<style scoped>
+    .active{
+        background-color: #3d96ca;
+        padding: 5px;
+        border-radius: 5px;
+        color:white !important;
+    }
+</style>

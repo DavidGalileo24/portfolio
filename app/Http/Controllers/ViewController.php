@@ -18,7 +18,7 @@ class ViewController extends Controller
     {
         $data = Project::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Projects/Index', [
+        return Inertia::render('Web/Projects', [
             'projects' => ProjectResource::collection($data),
         ]);
     }
@@ -27,7 +27,7 @@ class ViewController extends Controller
     {
         $data = Aboutme::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Aboutme/Index', [
+        return Inertia::render('Web/Aboutme', [
             'aboutme' => AboutmeResource::collection($data),
         ]);
     }
@@ -36,7 +36,7 @@ class ViewController extends Controller
     {
         $data = Service::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Services/Index', [
+        return Inertia::render('Web/Services', [
             'services' => ServiceResource::collection($data),
         ]);
     }
@@ -45,7 +45,7 @@ class ViewController extends Controller
     {
         $data = Blog::orderBy('id', 'desc')->get();
 
-        return Inertia::render('Blog/Index', [
+        return Inertia::render('Web/Blog', [
             'blogs' => BlogResource::collection($data),
         ]);
     }

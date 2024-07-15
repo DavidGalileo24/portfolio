@@ -3,9 +3,9 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 </script>
 
 <template>
-    <AppLayout title="Projects">
+    <AppLayout title="Services">
         <div class="bg-white overflow-hidden my-3">
-            <p>Projects</p>
+            <p>Services</p>
         </div>
     </AppLayout>
 </template>
