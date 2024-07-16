@@ -24,10 +24,10 @@ class ProjectController extends Controller
         Project::create([
             'name' => $request->name,
             'company_id' => $request->company_id,
+            'link' => $request->link,
             'type' => $request->type,
             'status' => $request->status,
             'description' => $request->description,
-            'name' => $request->name,
         ]);
 
         return redirect()->route('admin.projects');
