@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type'); //API, Dashboard, Landing Page, Monolith
-            $table->string('description')->nullable;
+            $table->longText('description')->nullable;
+            $table->string('status'); //Production, development
+            $table->foreignId('company_id')->constrained();
             $table->timestamps();
         });
     }

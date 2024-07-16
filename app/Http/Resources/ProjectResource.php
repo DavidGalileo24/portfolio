@@ -18,8 +18,10 @@ class ProjectResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'type' => $this->type,
+            'company' => new CompanyResource($this->whenLoaded('company')),
+            'status' => $this->status,
             'description' => $this->description,
-            'image' => new ImageResource($this->whenLoaded('image')),
+            'screenshot' => new ImageResource($this->whenLoaded('image')),
             'link' => new LinkResource($this->whenLoaded('link')),
         ];
     }

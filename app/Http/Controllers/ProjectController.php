@@ -12,7 +12,8 @@ class ProjectController extends Controller
     public function index()
     {
         $data = Project::orderBy('id', 'desc')->get();
-
+        $data->load('image');
+        $data->load('company');
         return Inertia::render('Admin/Projects/Index', [
             'projects' => ProjectResource::collection($data),
         ]);
@@ -20,7 +21,14 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-        Project::create($request->all);
+        Project::create([
+            'name' => $request->name,
+            'company_id' => $request->company_id,
+            'type' => $request->type,
+            'status' => $request->status,
+            'description' => $request->description,
+            'name' => $request->name,
+        ]);
 
         return redirect()->route('admin.projects');
     }
