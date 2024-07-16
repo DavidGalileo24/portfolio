@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ProjectTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +10,11 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'type', 'description'];
+
+    protected $cast = [
+        'type' => ProjectTypeEnum::class,
+    ];
 
     public function image()
     {

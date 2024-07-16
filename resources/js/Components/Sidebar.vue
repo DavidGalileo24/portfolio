@@ -1,11 +1,13 @@
 <script setup>
 import { FwbSidebar, FwbSidebarItem } from 'flowbite-vue'
 import { Link } from '@inertiajs/vue3';
+import AuthenticationCardLogo from './AuthenticationCardLogo.vue';
 
 </script>
 <template>
     <div class="w-1/5 text-sm">
         <fwb-sidebar>
+            <AuthenticationCardLogo />
             <!--home-->
                 <fwb-sidebar-item style="width: 100%;display:block">
                     <Link href="/admin/dashboard" :class="{'active': $page.url==='/admin/dashboard'}" class="w-full block">
@@ -32,7 +34,7 @@ import { Link } from '@inertiajs/vue3';
                 </fwb-sidebar-item>
             <!--customers-->
                 <fwb-sidebar-item>
-                    <Link href="/admin/company" :class="{'active': $page.url==='/admin/companies'}" class="w-full block">
+                    <Link href="/admin/companies" :class="{'active': $page.url==='/admin/companies'}" class="w-full block">
                     <template #default><font-awesome-icon :icon="['fas', 'star']" class="text-gray-300  mr-3 text-lg" />Customers</template>
                 </Link>
                 </fwb-sidebar-item>

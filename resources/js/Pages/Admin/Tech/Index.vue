@@ -117,6 +117,7 @@ const handleFile = (e) => {
     .techlogo{
         padding: 5px;
         width: 125px;
+        height: 110px;
         display:block;
         margin:0 auto;
         border-bottom: 1px solid #dae2eb;

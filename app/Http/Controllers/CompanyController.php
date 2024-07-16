@@ -20,7 +20,11 @@ class CompanyController extends Controller
 
     public function store(Request $request)
     {
-        Company::create($request->all);
+        $image = new ImageController();
+        $data = Company::create(['name'=>$request->name]);
+        $img = $image->store($request->image, Company::class, $data->id);
+        $data->image()->save($img);
+        sleep(1);
 
         return redirect()->route('admin.company');
     }

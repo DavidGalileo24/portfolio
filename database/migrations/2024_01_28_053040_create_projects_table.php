@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type'); //API, Dashboard, Landing Page, Monolito
+            $table->string('type'); //API, Dashboard, Landing Page, Monolith
             $table->string('description')->nullable;
             $table->timestamps();
         });
