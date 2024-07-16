@@ -43,7 +43,7 @@ const alert = () => {
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
                         <!--<Social />-->
-                        <PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()">
+                        <PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >
                             <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
                         </PrimaryButton>
                     </div>

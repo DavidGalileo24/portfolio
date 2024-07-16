@@ -12,6 +12,7 @@ import FloatingVue from 'floating-vue'
 import 'sweetalert2/dist/sweetalert2.min.css';
 import '/node_modules/flowbite-vue/dist/index.css'
 import 'floating-vue/dist/style.css'
+import 'animate.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
