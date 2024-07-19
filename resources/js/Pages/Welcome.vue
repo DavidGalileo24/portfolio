@@ -33,6 +33,12 @@ const alert = () => {
     <Head title="Inicio" />
     <div style="height: 100vh;" class="bg1">
         <Nav />
+        <!--<div class="w-1/3 mx-auto">
+            <marquee>
+                <img src="/images/loading.gif" class="loadingclass animate__animated animate__pulse animate__infinite	infinite" alt="">
+                <p class="text-center">Loading...</p>
+            </marquee>
+        </div>-->
         <div class="flex justify-center items-center h-4/5 w-full">
             <div class="w-1/6">
                 <Social />
@@ -92,5 +98,10 @@ const alert = () => {
     font-weight: 700;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
+}
+.loadingclass{
+    width: 50px;
+    display: block;
+    margin: 0 auto;
 }
 </style>

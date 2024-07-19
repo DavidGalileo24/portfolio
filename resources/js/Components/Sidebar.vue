@@ -9,7 +9,7 @@ import AuthenticationCardLogo from './AuthenticationCardLogo.vue';
         <fwb-sidebar>
             <AuthenticationCardLogo />
             <!--home-->
-                <fwb-sidebar-item style="width: 100%;display:block">
+                <fwb-sidebar-item>
                     <Link href="/admin/dashboard" :class="{'active': $page.url==='/admin/dashboard'}" class="w-full block">
                     <template #default><font-awesome-icon :icon="['fas', 'home']" class="text-gray-300 mr-3 text-lg" />Dashboard</template>
                 </Link>

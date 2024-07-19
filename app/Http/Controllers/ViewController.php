@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\AboutmeResource;
 use App\Http\Resources\BlogResource;
+use App\Http\Resources\CompanyResource;
 use App\Http\Resources\ProjectResource;
 use App\Http\Resources\ServiceResource;
+use App\Http\Resources\TechnologyResource;
 use App\Models\Aboutme;
 use App\Models\Blog;
+use App\Models\Company;
 use App\Models\Project;
 use App\Models\Service;
+use App\Models\Technologie;
 use Inertia\Inertia;
 
 class ViewController extends Controller
@@ -25,10 +29,12 @@ class ViewController extends Controller
 
     public function allAboutme()
     {
-        $data = Aboutme::orderBy('id', 'desc')->get();
+        $tech = Technologie::orderBy('id', 'desc')->get();
+        $company = Company::orderBy('id', 'desc')->get();
 
         return Inertia::render('Web/Aboutme', [
-            'aboutme' => AboutmeResource::collection($data),
+            'tech' => TechnologyResource::collection($tech),
+            'company' => CompanyResource::collection($company),
         ]);
     }
 
