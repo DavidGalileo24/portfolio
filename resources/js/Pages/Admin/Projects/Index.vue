@@ -13,6 +13,10 @@ defineProps({
     projects: {
         type: Object,
         default: ({})
+    },
+    companies: {
+        type: Object,
+        default: ({})
     }
 });
 
@@ -27,8 +31,13 @@ const state = reactive({
         description: '',
         image: null,
     }),
-    status: ['Development', 'Production'],
-    projetType: ['Landing page', 'Dashboard', 'API', 'Monolith'],
+    status: [{id: 1, name: 'Development'}, {id:2, name: 'Production'}],
+    projetType: [
+        {id: 1, name: 'Landing page'}, 
+        {id: 2, name: 'Dashboard'}, 
+        {id: 3, name: 'API'},
+        {id: 4, name: 'Monolith'}
+    ],
 });
 
 const storeProjects = () => {
@@ -82,6 +91,37 @@ const handleFile = (e) => {
                         <div class="mt-5">
                             <InputLabel for="name" value="Name" class="text-sm" />
                             <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
+                        </div>
+                        <div class="mt-3">
+                            <InputLabel for="company_id" value="Company" class="text-sm"/>
+                            <select v-model="state.form.company_id"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="comp.id" v-for="comp in companies" :key="comp.id">
+                                    {{ comp.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mt-5">
+                            <InputLabel for="url" value="Link" class="text-sm" />
+                            <TextInput v-model="state.form.link" type="text" class="block w-full" autofocus />
+                        </div>
+                        <div class="mt-3">
+                            <InputLabel for="type" value="Project type" class="text-sm"/>
+                            <select v-model="state.form.type"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="type.id" v-for="type in state.projetType" :key="type.id">
+                                    {{ type.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <InputLabel for="status" value="Project status" class="text-sm"/>
+                            <select v-model="state.form.status"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="status.id" v-for="status in state.status" :key="status.id">
+                                    {{ status.name }}
+                                </option>
+                            </select>
                         </div>
                         <div class="mt-3">
                             <InputLabel for="description" value="Descripción" class="text-sm" />

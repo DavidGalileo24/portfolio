@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ProjectResource;
+use App\Models\Company;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -16,6 +17,7 @@ class ProjectController extends Controller
         $data->load('company');
         return Inertia::render('Admin/Projects/Index', [
             'projects' => ProjectResource::collection($data),
+            'companies' => Company::all(),
         ]);
     }
 
