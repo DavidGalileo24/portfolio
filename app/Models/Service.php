@@ -20,5 +20,4 @@ class Service extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
-
 }

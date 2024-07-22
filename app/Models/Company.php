@@ -16,8 +16,8 @@ class Company extends Model
         return $this->morphOne(Image::class, 'imageable');
     }
 
-    public function project(){
+    public function project()
+    {
         return $this->hasOne(Project::class);
     }
-
 }

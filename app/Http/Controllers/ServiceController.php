@@ -13,15 +13,16 @@ class ServiceController extends Controller
     {
         $data = Service::orderBy('id', 'desc')->get();
         $data->load('image');
+
         return Inertia::render('Admin/Services/Index', [
             'services' => ServiceResource::collection($data),
         ]);
     }
-    
+
     public function store(Request $request)
     {
         $image = new ImageController();
-        $data = Service::create(['name'=>$request->name,'description'=>$request->description]);
+        $data = Service::create(['name' => $request->name, 'description' => $request->description]);
         $img = $image->store($request->image, Service::class, $data->id);
         $data->image()->save($img);
         sleep(1);

@@ -26,4 +26,8 @@ class Technologie extends Model
         return $this->morphOne(Image::class, 'imageable');
     }
 
+    public function project()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

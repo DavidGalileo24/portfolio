@@ -15,6 +15,7 @@ class ProjectController extends Controller
         $data = Project::orderBy('id', 'desc')->get();
         $data->load('image');
         $data->load('company');
+
         return Inertia::render('Admin/Projects/Index', [
             'projects' => ProjectResource::collection($data),
             'companies' => Company::all(),
