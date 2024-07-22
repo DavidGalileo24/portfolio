@@ -11,7 +11,7 @@ class Project extends Model
 {
     use HasFactory;
  
-    protected $fillable = ['name', 'company_id', 'link', 'type', 'status', 'description'];
+    protected $fillable = ['name', 'company_id', 'link', 'type', 'status', 'color', 'link_repo', 'description'];
 
     protected $cast = [
         'type' => ProjectTypeEnum::class,

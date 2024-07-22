@@ -7,6 +7,7 @@ import TextInput from '@/Components/TextInput.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import Filepond from '@/Components/Filepond.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
+import DialogModal from '@/Components/DialogModal.vue';
 import { FwbA, FwbTable, FwbTableBody, FwbTableCell, FwbTableHead, FwbTableHeadCell, FwbTableRow } from 'flowbite-vue'
 
 defineProps({
@@ -17,26 +18,29 @@ defineProps({
     companies: {
         type: Object,
         default: ({})
-    }
+    },
 });
 
 const state = reactive({
     edit: '',
+    modalStoreUpdate: false,
     form: useForm({
         name: '',
         company_id: '',
         link: '',
         type: '',
-        status: '', 
+        status: '',
+        color: '',
+        link_repo: '',
         description: '',
         image: null,
     }),
-    status: [{id: 1, name: 'Development'}, {id:2, name: 'Production'}],
+    status: [{ id: 1, name: 'Development' }, { id: 2, name: 'Production' }],
     projetType: [
-        {id: 1, name: 'Landing page'}, 
-        {id: 2, name: 'Dashboard'}, 
-        {id: 3, name: 'API'},
-        {id: 4, name: 'Monolith'}
+        { id: 1, name: 'Landing page' },
+        { id: 2, name: 'Dashboard' },
+        { id: 3, name: 'API' },
+        { id: 4, name: 'Monolith' }
     ],
 });
 
@@ -74,68 +78,20 @@ const handleFile = (e) => {
     };
     reader.readAsDataURL(image);
 }
+const showModalStoreUpdate = () => {
+    state.modalStoreUpdate = true;
+}
+const closeModal = () => {
+    state.modalStoreUpdate = false;
+}
 </script>
 
 <template>
-    <AppLayout title="projects">
+    <AppLayout title="Projects">
         <div class="bg-gray-800 overflow-hidden my-3">
-            <div class="w-full flex p-5">
-                <div class="w-1/4">
-                    <form class="p-3 border rounded-lg bg-white" @submit.prevent="storeProjects()">
-                        <h2 class="text-xl font-semibold text-center">Added new project</h2>
-                        <div class="mt-3">
-                            <InputLabel for="image" value="Image" class="text-sm" />
-                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
-                                max-files="1" />
-                        </div>
-                        <div class="mt-5">
-                            <InputLabel for="name" value="Name" class="text-sm" />
-                            <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="company_id" value="Company" class="text-sm"/>
-                            <select v-model="state.form.company_id"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="comp.id" v-for="comp in companies" :key="comp.id">
-                                    {{ comp.name }}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="mt-5">
-                            <InputLabel for="url" value="Link" class="text-sm" />
-                            <TextInput v-model="state.form.link" type="text" class="block w-full" autofocus />
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="type" value="Project type" class="text-sm"/>
-                            <select v-model="state.form.type"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="type.id" v-for="type in state.projetType" :key="type.id">
-                                    {{ type.name }}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="status" value="Project status" class="text-sm"/>
-                            <select v-model="state.form.status"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="status.id" v-for="status in state.status" :key="status.id">
-                                    {{ status.name }}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="description" value="Descripción" class="text-sm" />
-                            <textarea v-model="state.form.description" type="text" rows="4"
-                                class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
-                        </div>
-                        <div class="mt-3">
-                            <PrimaryButton class="m-1 w-full">
-                                <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send data
-                            </PrimaryButton>
-                        </div>
-                    </form>
-                </div>
-                <div class="w-3/4 flex flex-wrap justify-center mx-2">
+            <div class="w-full p-5">
+                <PrimaryButton @click="showModalStoreUpdate()">New project</PrimaryButton>
+                <div class="w-full flex flex-wrap justify-center m-2">
                     <fwb-table class="w-full">
                         <fwb-table-head>
                             <fwb-table-head-cell>Image</fwb-table-head-cell>
@@ -149,7 +105,7 @@ const handleFile = (e) => {
                         <fwb-table-body>
                             <fwb-table-row v-for="pr in projects.data" :key="pr.id">
                                 <fwb-table-cell><img :src="pr.image.file" class="techlogo" alt=""></fwb-table-cell>
-                                <fwb-table-cell>{{pr.name}}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.name }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.description }}</fwb-table-cell>
                             </fwb-table-row>
                         </fwb-table-body>
@@ -157,8 +113,75 @@ const handleFile = (e) => {
                 </div>
             </div>
         </div>
+        <DialogModal :show="state.modalStoreUpdate" @close="closeModal()" :max-width="'5xl'">
+            <template #title>Added new project</template>
+            <template #content>
+                <form class="p-3 bg-white" @submit.prevent="storeProjects()">
+                    <div class="mt-3">
+                        <InputLabel for="image" value="Image" class="text-sm" />
+                        <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
+                            max-files="1" />
+                    </div>
+                    <div class="flex justify-between mt-3">
+                        <div class="mx-1">
+                            <InputLabel for="color" value="Color" class="text-sm" />
+                            <input v-model="state.form.color" type="color" class="block w-full" autofocus />
+                        </div>
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="name" value="Name" class="text-sm" />
+                            <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
+                        </div>
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="company_id" value="Company" class="text-sm" />
+                            <select v-model="state.form.company_id"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="comp.id" v-for="comp in companies" :key="comp.id">
+                                    {{ comp.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="link" value="Link" class="text-sm" />
+                            <TextInput v-model="state.form.link" type="text" class="block w-full" autofocus />
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-3">
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="link_url" value="Repository Link" class="text-sm" />
+                            <TextInput v-model="state.form.link_repo" type="text" class="block w-full" autofocus />
+                        </div>
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="type" value="Project type" class="text-sm" />
+                            <select v-model="state.form.type"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="type.id" v-for="type in state.projetType" :key="type.id">
+                                    {{ type.name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="w-1/3 mx-1">
+                            <InputLabel for="status" value="Project status" class="text-sm" />
+                            <select v-model="state.form.status"
+                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option :value="status.id" v-for="status in state.status" :key="status.id">
+                                    {{ status.name }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <InputLabel for="description" value="Descripción" class="text-sm" />
+                        <textarea v-model="state.form.description" type="text" rows="4"
+                            class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
+                    </div>
+                    <div class="mt-3 flex justify-end">
+                        <PrimaryButton class="">
+                            <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send data
+                        </PrimaryButton>
+                    </div>
+                </form>
+            </template>
+        </DialogModal>
     </AppLayout>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>

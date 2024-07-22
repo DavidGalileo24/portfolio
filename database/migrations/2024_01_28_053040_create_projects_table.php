@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type'); //API, Dashboard, Landing Page, Monolith
-            $table->longText('description')->nullable;
-            $table->string('status'); //Production, development
             $table->foreignId('company_id')->constrained();
+            $table->text('link');
+            $table->string('type'); //API, Dashboard, Landing Page, Monolith
+            $table->string('status'); //Production, development
+            $table->text('color');
+            $table->text('link_repo');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

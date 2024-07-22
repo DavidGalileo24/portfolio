@@ -21,6 +21,8 @@ class ProjectResource extends JsonResource
             'link' => $this->link,
             'type' => $this->type,
             'status' => $this->status,
+            'link_repo' => $this->link_repo,
+            'color' => $this->color,
             'description' => $this->description,
             'screenshot' => new ImageResource($this->whenLoaded('image')),
         ];
