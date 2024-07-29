@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\TechnologyResource;
-use App\Models\Technologie;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class TechnologieController extends Controller
+class TechnologyController extends Controller
 {
     public function index()
     {
-        $data = Technologie::orderBy('id', 'desc')->get();
+        $data = Technology::orderBy('id', 'desc')->get();
         $data->load('image');
 
         return Inertia::render('Admin/Tech/Index', [
@@ -22,22 +22,22 @@ class TechnologieController extends Controller
     public function store(Request $request)
     {
         $image = new ImageController();
-        $data = Technologie::create(['name' => $request->name, 'percentaje' => $request->percentaje, 'type' => $request->type]);
-        $img = $image->store($request->image, Technologie::class, $data->id);
+        $data = Technology::create(['name' => $request->name, 'percentaje' => $request->percentaje, 'type' => $request->type]);
+        $img = $image->store($request->image, Technology::class, $data->id);
         $data->image()->save($img);
         sleep(1);
 
         return redirect()->route('admin.tech');
     }
 
-    public function update(Request $request, Technologie $tech)
+    public function update(Request $request, Technology $tech)
     {
         $tech->update($request->all());
 
         return redirect()->route('admin.tech');
     }
 
-    public function destroy(Technologie $tech)
+    public function destroy(Technology $tech)
     {
         $tech->delete();
 

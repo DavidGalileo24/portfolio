@@ -26,10 +26,10 @@ import AuthenticationCardLogo from './AuthenticationCardLogo.vue';
                     <template #default><font-awesome-icon :icon="['fas', 'code']" class="text-gray-300 mr-3 text-lg" />Services</template>
                 </Link>
                 </fwb-sidebar-item>
-            <!--technologies-->
+            <!--Technologys-->
                 <fwb-sidebar-item>
-                    <Link href="/admin/technologies" :class="{'active': $page.url==='/admin/technologies'}" class="w-full block">
-                    <template #default><font-awesome-icon :icon="['fas', 'terminal']" class="text-gray-300 mr-3 text-lg"/>Technologies</template>
+                    <Link href="/admin/Technologys" :class="{'active': $page.url==='/admin/Technologys'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'terminal']" class="text-gray-300 mr-3 text-lg"/>Technologys</template>
                 </Link>
                 </fwb-sidebar-item>
             <!--customers-->

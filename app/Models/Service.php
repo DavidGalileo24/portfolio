@@ -11,9 +11,9 @@ class Service extends Model
 
     protected $fillable = ['name', 'description'];
 
-    public function technologies()
+    public function Technologys()
     {
-        return $this->belongsToMany(Technologie::class);
+        return $this->belongsToMany(Technology::class);
     }
 
     public function image()

@@ -30,6 +30,6 @@ class Project extends Model
 
     public function technology()
     {
-        return $this->belongsTo(Technologie::class);
+        return $this->belongsTo(Technology::class);
     }
 }

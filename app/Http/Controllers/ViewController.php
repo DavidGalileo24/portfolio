@@ -11,7 +11,7 @@ use App\Models\Blog;
 use App\Models\Company;
 use App\Models\Project;
 use App\Models\Service;
-use App\Models\Technologie;
+use App\Models\Technology;
 use Inertia\Inertia;
 
 class ViewController extends Controller
@@ -27,7 +27,7 @@ class ViewController extends Controller
 
     public function allAboutme()
     {
-        $tech = Technologie::orderBy('id', 'desc')->get();
+        $tech = Technology::orderBy('id', 'desc')->get();
         $company = Company::orderBy('id', 'desc')->get();
 
         return Inertia::render('Web/Aboutme', [

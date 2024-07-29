@@ -19,6 +19,10 @@ defineProps({
         type: Object,
         default: ({})
     },
+    tech: {
+        type: Object,
+        default: ({})
+    },
 });
 
 const state = reactive({
@@ -33,6 +37,7 @@ const state = reactive({
         color: '',
         link_repo: '',
         description: '',
+        technology_id: [],
         image: null,
     }),
     status: [{ id: 1, name: 'Development' }, { id: 2, name: 'Production' }],
@@ -117,25 +122,33 @@ const closeModal = () => {
             <template #title>Added new project</template>
             <template #content>
                 <form class="p-3 bg-white" @submit.prevent="storeProjects()">
-                    <div class="mt-3">
-                        <InputLabel for="image" value="Image" class="text-sm" />
-                        <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
-                            max-files="1" />
-                    </div>
                     <div class="flex justify-between mt-3">
-                        <div class="mx-1">
+                        <div class="w-1/2 mx-1">
+                            <InputLabel for="image" value="Screenshot" class="text-sm" />
+                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
+                                max-files="1" />
+                        </div>
+                        <div class="w-1/2 mx-1">
+                            <InputLabel for="technology_id" value="Tecnologías" class="text-sm" />
+                            <span v-for="tech in tech.data" :key="tech.id">
+                                <input v-model="state.form.technology_id" type="checkbox" :value="tech.id" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                <label class="text-sm font-medium text-gray-900 dark:text-gray-300 mr-4 ml-0.5">{{tech.name}}</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mx-1">
                             <InputLabel for="color" value="Color" class="text-sm" />
                             <input v-model="state.form.color" type="color" class="block w-full" autofocus />
                         </div>
+                    <div class="flex justify-between mt-3">
                         <div class="w-1/3 mx-1">
                             <InputLabel for="name" value="Name" class="text-sm" />
                             <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
                         </div>
                         <div class="w-1/3 mx-1">
                             <InputLabel for="company_id" value="Company" class="text-sm" />
-                            <select v-model="state.form.company_id"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="comp.id" v-for="comp in companies" :key="comp.id">
+                            <select v-model="state.form.company_id" class="w-full border-gray-300 text-sm rounded-md shadow-sm">
+                                <option :value="comp.id" v-for="comp in companies.data" :key="comp.id">
                                     {{ comp.name }}
                                 </option>
                             </select>

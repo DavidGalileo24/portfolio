@@ -12,6 +12,7 @@ class CompanyController extends Controller
     public function index()
     {
         $data = Company::orderBy('id', 'desc')->get();
+        $data->load('image');
 
         return Inertia::render('Admin/Company/Index', [
             'company' => CompanyResource::collection($data),

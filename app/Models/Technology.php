@@ -6,7 +6,7 @@ use App\Enums\TechTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Technologie extends Model
+class Technology extends Model
 {
     use HasFactory;
 

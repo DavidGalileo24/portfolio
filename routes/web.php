@@ -4,7 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\TechnologieController;
+use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -51,8 +51,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         ->names(['index' => 'admin.services', 'store' => 'admin.services.store', 'update' => 'admin.services.update', 'destroy' => 'admin.services.delete'])
         ->except(['create', 'edit']);
 
-    //Technologies
-    Route::resource('/technologies', TechnologieController::class)
+    //Technologys
+    Route::resource('/Technologys', TechnologyController::class)
         ->names(['index' => 'admin.tech', 'store' => 'admin.tech.store', 'update' => 'admin.tech.update', 'destroy' => 'admin.tech.delete'])
         ->except(['create', 'edit']);
 
