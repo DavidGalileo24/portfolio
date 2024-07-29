@@ -26,8 +26,8 @@ class Technology extends Model
         return $this->morphOne(Image::class, 'imageable');
     }
 
-    public function project()
+    public function projects()
     {
-        return $this->hasMany(Project::class);
+        return $this->belongsToMany(Project::class, 'projects_technology');
     }
 }

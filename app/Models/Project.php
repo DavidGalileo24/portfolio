@@ -11,7 +11,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'company_id', 'link', 'type', 'status', 'color', 'link_repo', 'technology_id', 'description'];
+    protected $fillable = ['name', 'company_id', 'link', 'type', 'status', 'color', 'link_repo', 'description'];
 
     protected $cast = [
         'type' => ProjectTypeEnum::class,
@@ -28,8 +28,8 @@ class Project extends Model
         return $this->morphOne(Image::class, 'imageable');
     }
 
-    public function technology()
+    public function technologies()
     {
-        return $this->belongsTo(Technology::class);
+        return $this->belongsToMany(Technology::class, 'projects_technology');
     }
 }

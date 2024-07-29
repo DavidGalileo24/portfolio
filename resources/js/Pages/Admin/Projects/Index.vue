@@ -167,7 +167,7 @@ const closeModal = () => {
                             <InputLabel for="type" value="Project type" class="text-sm" />
                             <select v-model="state.form.type"
                                 class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="type.id" v-for="type in state.projetType" :key="type.id">
+                                <option :value="type.name" v-for="type in state.projetType" :key="type.id">
                                     {{ type.name }}
                                 </option>
                             </select>
@@ -176,7 +176,7 @@ const closeModal = () => {
                             <InputLabel for="status" value="Project status" class="text-sm" />
                             <select v-model="state.form.status"
                                 class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                <option :value="status.id" v-for="status in state.status" :key="status.id">
+                                <option :value="status.name" v-for="status in state.status" :key="status.id">
                                     {{ status.name }}
                                 </option>
                             </select>

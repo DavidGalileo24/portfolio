@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'link_repo' => $request->link_repo,
             'description' => $request->description,
         ]);
-        $data->whereIn('technology_id', [$request->technology_id]);
+        $data->technologies()->attach(['technology_id' => $request->technology_id]);
 
         return redirect()->route('admin.projects');
     }

@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('status'); //Production, development
             $table->text('color');
             $table->text('link_repo');
-            $table->foreignId('Technology_id')->constrained();
             $table->longText('description')->nullable();
             $table->timestamps();
         });
