@@ -19,7 +19,7 @@ class ServiceResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'image' => new ImageResource($this->whenLoaded('image')),
-            'Technologys' => TechnologyResource::collection($this->whenLoaded('Technologys')),
+            'technologies' => TechnologyResource::collection($this->whenLoaded('technologies')),
         ];
     }
 }

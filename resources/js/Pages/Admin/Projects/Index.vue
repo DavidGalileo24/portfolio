@@ -99,18 +99,26 @@ const closeModal = () => {
                 <div class="w-full flex flex-wrap justify-center m-2">
                     <fwb-table class="w-full">
                         <fwb-table-head>
+                            <fwb-table-head-cell>Color</fwb-table-head-cell>
                             <fwb-table-head-cell>Image</fwb-table-head-cell>
                             <fwb-table-head-cell>project</fwb-table-head-cell>
                             <fwb-table-head-cell>Company</fwb-table-head-cell>
                             <fwb-table-head-cell>Link</fwb-table-head-cell>
+                            <fwb-table-head-cell>Repo</fwb-table-head-cell>
                             <fwb-table-head-cell>Type</fwb-table-head-cell>
                             <fwb-table-head-cell>Status</fwb-table-head-cell>
                             <fwb-table-head-cell>Description</fwb-table-head-cell>
                         </fwb-table-head>
                         <fwb-table-body>
                             <fwb-table-row v-for="pr in projects.data" :key="pr.id">
+                                <fwb-table-cell>{{ pr.color }}</fwb-table-cell>
                                 <fwb-table-cell><img :src="pr.image.file" class="techlogo" alt=""></fwb-table-cell>
                                 <fwb-table-cell>{{ pr.name }}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.company.name }}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.link }}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.link_repo }}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.type }}</fwb-table-cell>
+                                <fwb-table-cell>{{ pr.status }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.description }}</fwb-table-cell>
                             </fwb-table-row>
                         </fwb-table-body>
@@ -125,7 +133,7 @@ const closeModal = () => {
                     <div class="flex justify-between mt-3">
                         <div class="w-1/2 mx-1">
                             <InputLabel for="image" value="Screenshot" class="text-sm" />
-                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
+                            <Filepond v-model="state.form.Screenshot" @change="handleFile($event)" allow-multiple="false"
                                 max-files="1" />
                         </div>
                         <div class="w-1/2 mx-1">
@@ -197,4 +205,13 @@ const closeModal = () => {
         </DialogModal>
     </AppLayout>
 </template>
-<style scoped></style>
+<style scoped>
+    .techlogo{
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+        display:block;
+        margin:0 auto;
+        border-bottom: 1px solid #dae2eb;
+    }
+</style>

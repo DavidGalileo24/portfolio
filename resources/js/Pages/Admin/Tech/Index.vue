@@ -59,7 +59,7 @@ const handleFile = (e) => {
 }
 </script>
 <template>
-    <AppLayout title="Technologys">
+    <AppLayout title="Technologies">
         <div class="bg-gray-800 overflow-hidden my-3">
             <div class="w-full flex p-5">
                 <div class="w-1/4">
