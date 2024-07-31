@@ -19,6 +19,8 @@ class ViewController extends Controller
     public function allProjects()
     {
         $data = Project::orderBy('id', 'desc')->get();
+        $data->load('image');
+        $data->load('company');
 
         return Inertia::render('Web/Projects', [
             'projects' => ProjectResource::collection($data),
@@ -39,6 +41,7 @@ class ViewController extends Controller
     public function allServices()
     {
         $data = Service::orderBy('id', 'desc')->get();
+        $data->load('image');
 
         return Inertia::render('Web/Services', [
             'services' => ServiceResource::collection($data),

@@ -4,13 +4,18 @@ import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
-defineProps({});
+defineProps({
+    projects: {
+        type: Object,
+        default: ({})
+    },
+});
 </script>
 
 <template>
     <Head title="Proyectos" />
     <Nav />
-    Proyectos
+    Proyectos {{projects}}
 </template>
 
 <style scoped></style>

@@ -4,13 +4,18 @@ import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
-defineProps({});
+defineProps({
+    services: {
+        type: Object,
+        default: ({})
+    },
+});
 </script>
 
 <template>
     <Head title="Servicios" />
     <Nav />
-    Services
+    Services {{ services }}
 </template>
 
 <style scoped></style>
