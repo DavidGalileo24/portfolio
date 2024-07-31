@@ -49,12 +49,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     //Services
     Route::resource('/services', ServiceController::class)
         ->names(['index' => 'admin.services', 'store' => 'admin.services.store', 'update' => 'admin.services.update', 'destroy' => 'admin.services.delete'])
-        ->except(['create', 'edit']);
+        ->except(['create', 'show', 'edit']);
 
     //Technologies
     Route::resource('/technologies', TechnologyController::class)
         ->names(['index' => 'admin.tech', 'store' => 'admin.tech.store', 'update' => 'admin.tech.update', 'destroy' => 'admin.tech.delete'])
-        ->except(['create', 'edit']);
+        ->except(['create', 'show', 'edit']);
 
     //Blog
     Route::resource('/blog', BlogController::class)

@@ -27,6 +27,17 @@ class ViewController extends Controller
         ]);
     }
 
+    public function showProjects(Project $project)
+    {
+
+        $project->load('image');
+        $project->load('company');
+
+        return Inertia::render('Web/Projects', [
+            'show_project' => ProjectResource::make($project),
+        ]);
+    }
+
     public function allAboutme()
     {
         $tech = Technology::orderBy('id', 'desc')->get();

@@ -9,6 +9,10 @@ defineProps({
         type: Object,
         default: ({})
     },
+    show_project: {
+        type: Object,
+        default: ({})
+    },
 });
 </script>
 
