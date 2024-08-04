@@ -9,7 +9,7 @@
     <div>
         <h3 class="text-xl font-semibold text-white "><slot name="title" /></h3>
     </div>
-    <p class="mt-2 text-md text-gray-200">
+    <p class="mt-2 text-md font-extralight text-gray-200">
         <slot name="description" />
     </p>
 </div>

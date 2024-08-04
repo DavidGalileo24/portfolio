@@ -33,15 +33,13 @@ const state = reactive({
     <Head title="Proyectos" />
     <Nav />
     <div class="mt-10 p-10">
-        <h1 class="text-white text-4xl transtitle">My Latest Work</h1>
+        <h1 class="text-white text-5xl transtitle">Recent work performed</h1>
         <p class="text-white text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design
         </p>
         <div class="w-full mt-10 flex justify-center">
-            <div type="button" v-for="types in state.projetType" :key="types.id"
-                class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700">
-                {{types.name}}
-            </div>
+            <SecondaryButton class="m-1">All projects</SecondaryButton>
+            <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id">{{types.name}}</SecondaryButton>
         </div>
         <div class="grid grid-cols-3 gap-3 mt-7">
             <CardImage v-for="projects in projects.data" :key="projects.id">

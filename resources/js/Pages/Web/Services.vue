@@ -15,8 +15,9 @@ defineProps({
     <Head title="Servicios" />
     <Nav />
     <div class="mt-10 p-10">
-        <h1 class="text-white text-4xl mb-5 transtitle">What I Do</h1>
-        <div class="grid grid-cols-4 gap-4">
+        <h1 class="text-white text-4xl transtitle">Services i provide to my clients in here</h1>
+        <p class="text-white text-md">I always want to be able to meet the goals of my clients, I value my services as a designer through my work. You may like my services.</p>
+        <div class="grid grid-cols-4 gap-4 mt-10 ">
             <Card v-for="services in services.data" :key="services.id">
                 <template #image><img :src="services.image.file" /></template>
                 <template #title>{{services.name}}</template>
