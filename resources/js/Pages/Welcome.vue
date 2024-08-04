@@ -87,12 +87,6 @@ const alert = () => {
     background-size: 100% 100%;
     background-attachment: fixed;
 }
-.transtitle{
-    height: 50px;
-    font-weight: 700;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-}
 .loadingclass{
     width: 50px;
     display: block;

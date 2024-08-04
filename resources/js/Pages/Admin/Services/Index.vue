@@ -76,7 +76,7 @@ const handleFile = (e) => {
                         <div class="mt-3">
                             <InputLabel for="description" value="Descripción" class="text-sm" />
                             <textarea v-model="state.form.description" type="text" rows="4"
-                                class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
+                                class="w-full text-sm border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
                         </div>
                         <div class="mt-3">
                             <PrimaryButton class="m-1 w-full">
