@@ -13,7 +13,7 @@ defineProps({});
                 <span class="font-semibold">Salgado</span>
             </h1>
         </div>
-        <div class="w-3/4 flex items-center justify-end">
+        <div class="w-3/4 flex items-center justify-end text-md">
             <Link href="/" class="mx-4" :class="{'active': $page.url==='/'}">Home</Link>
             <Link href="/projects" class="mx-4" :class="{'active': $page.url==='/projects'}">Works</Link>
             <Link href="/services" class="mx-4" :class="{'active': $page.url==='/services'}">Services</Link>

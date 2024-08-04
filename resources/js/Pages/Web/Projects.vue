@@ -1,8 +1,10 @@
 <script setup>
+import { reactive } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import CardImage from '@/Components/CardImage.vue';
 
 defineProps({
     projects: {
@@ -14,12 +16,39 @@ defineProps({
         default: ({})
     },
 });
-</script>
 
+const state = reactive({
+    status: [{ id: 1, name: 'Development' }, { id: 2, name: 'Production' }],
+    projetType: [
+        { id: 1, name: 'Landing page' },
+        { id: 2, name: 'Dashboard' },
+        { id: 3, name: 'API' },
+        { id: 4, name: 'Monolith' }
+    ],
+});
+
+</script>
 <template>
+
     <Head title="Proyectos" />
     <Nav />
-    Proyectos {{projects}}
+    <div class="mt-10 p-10">
+        <h1 class="text-white text-4xl transtitle">My Latest Work</h1>
+        <p class="text-white text-md">Most common methods for designing websites that work well on desktop is responsive
+            and adaptive design
+        </p>
+        <div class="w-full mt-10 flex justify-center">
+            <div type="button" v-for="types in state.projetType" :key="types.id"
+                class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700">
+                {{types.name}}
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mt-7">
+            <CardImage v-for="projects in projects.data" :key="projects.id">
+                <template #image><img :src="projects.image.file" class=" rounded-tl-xl rounded-br-xl " /></template>
+            </CardImage>
+        </div>
+    </div>
 </template>
 
 <style scoped></style>
