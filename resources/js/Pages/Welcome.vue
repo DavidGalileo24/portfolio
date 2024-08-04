@@ -40,23 +40,17 @@ const alert = () => {
             </marquee>
         </div>-->
         <div class="flex justify-center items-center h-4/5 w-full">
-            <div class="w-1/6">
-                <Social />
-            </div>
-            <div class="w-2/3 text-white flex justify-center">
+            <div class="w-full text-white flex justify-center">
                 <div class="text-center">
-                    <div class="text-xl mx-auto rounded-mdxl">Hello There!</div>
+                    <div class="text-xl mx-auto rounded-md-xl">Hello There!</div>
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
-                        <!--<Social />-->
-                        <PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >
+                        <Social />
+                        <!--<PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >
                             <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-                        </PrimaryButton>
+                        </PrimaryButton>-->
                     </div>
                 </div>
-            </div>
-            <div class="w-1/6">
-
             </div>
             <!--<div class="w-1/2">
                 <form class="p-5 rounded-lg bg-white w-2/3 mx-auto" @submit.prevent="sendEmail()">
