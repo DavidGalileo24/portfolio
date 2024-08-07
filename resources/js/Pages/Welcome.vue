@@ -35,7 +35,7 @@ const alert = () => {
         <Nav />
         <!--<div class="w-1/3 mx-auto">
             <marquee>
-                <img src="/images/loading.gif" class="loadingclass animate__animated animate__pulse animate__infinite	infinite" alt="">
+                <img loading="lazy" src="/images/loading.gif" class="loadingclass animate__animated animate__pulse animate__infinite	infinite" alt="">
                 <p class="text-center">Loading...</p>
             </marquee>
         </div>-->

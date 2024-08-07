@@ -99,7 +99,7 @@ const handleFile = (e) => {
                     <span v-for="tech in tech.data" :key="tech.id">
                         <fwb-card href="#" class="m-2 mt-0">
                             <div class="p-2">
-                                <img :src="tech.image.file" alt="logo" class="techlogo">
+                                <img :src="tech.image.file" alt="logo" class="techlogo" loading="lazy" >
                                 <h3 class="text-lg font-bold tracking-tight text-center text-gray-900">{{tech.name}}</h3>
                                 <div class="flex justify-evenly mt-3">
                                     <span class="text-xs bg-black text-white rounded-xl p-1 text-center">{{tech.type}}</span>

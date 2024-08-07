@@ -94,7 +94,7 @@ const handleFile = (e) => {
                         </fwb-table-head>
                         <fwb-table-body>
                             <fwb-table-row v-for="serv in services.data" :key="serv.id">
-                                <fwb-table-cell><img :src="serv.image.file" class="techlogo" alt=""></fwb-table-cell>
+                                <fwb-table-cell><img :src="serv.image.file" class="techlogo" alt="" loading="lazy" ></fwb-table-cell>
                                 <fwb-table-cell>{{serv.name}}</fwb-table-cell>
                                 <fwb-table-cell>{{ serv.description }}</fwb-table-cell>
                             </fwb-table-row>

@@ -81,7 +81,7 @@ const handleFile = (e) => {
                     <span v-for="company in company.data" :key="company.id">
                         <fwb-card href="#" class="m-2 mt-0">
                             <div class="p-2">
-                                <img :src="company.image.file" alt="logo" class="companylogo">
+                                <img  loading="lazy" :src="company.image.file" alt="logo" class="companylogo">
                                 <h3 class="text-lg font-bold tracking-tight text-center text-gray-900">{{company.name}}</h3>
                             </div>
                         </fwb-card>

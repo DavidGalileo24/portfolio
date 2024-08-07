@@ -112,7 +112,7 @@ const closeModal = () => {
                         <fwb-table-body>
                             <fwb-table-row v-for="pr in projects.data" :key="pr.id">
                                 <fwb-table-cell>{{ pr.color }}</fwb-table-cell>
-                                <fwb-table-cell><img :src="pr.image.file" class="techlogo" alt=""></fwb-table-cell>
+                                <fwb-table-cell><img :src="pr.image.file" class="techlogo" alt="" loading="lazy" ></fwb-table-cell>
                                 <fwb-table-cell>{{ pr.name }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.company.name }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.link }}</fwb-table-cell>

@@ -33,8 +33,8 @@ const state = reactive({
     <Head title="Proyectos" />
     <Nav />
     <div class="mt-10 p-10">
-        <h1 class="text-white text-5xl transtitle">Recent work performed</h1>
-        <p class="text-white text-md">Most common methods for designing websites that work well on desktop is responsive
+        <h1 class="text-5xl transtitle">Recent work performed</h1>
+        <p class="text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design
         </p>
         <div class="w-full mt-10 flex justify-center">
@@ -43,7 +43,7 @@ const state = reactive({
         </div>
         <div class="grid grid-cols-3 gap-3 mt-7">
             <CardImage v-for="projects in projects.data" :key="projects.id">
-                <template #image><img :src="projects.image.file" class=" rounded-tl-xl rounded-br-xl " /></template>
+                <template #image><img :src="projects.image.file" class=" rounded-tl-xl rounded-br-xl " loading="lazy" /></template>
             </CardImage>
         </div>
     </div>

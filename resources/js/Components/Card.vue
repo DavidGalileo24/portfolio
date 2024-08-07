@@ -7,9 +7,9 @@
             <slot name="image" />
         </div>
     <div>
-        <h3 class="text-xl font-semibold text-white "><slot name="title" /></h3>
+        <h3 class="text-xl font-semibold "><slot name="title" /></h3>
     </div>
-    <p class="mt-2 text-md font-extralight text-gray-200">
+    <p class="mt-2 text-md font-extralight text-gray-900">
         <slot name="description" />
     </p>
 </div>
