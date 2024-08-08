@@ -18,7 +18,7 @@ defineProps({});
             <Link href="/projects" class="mx-4 itm" :class="{'active': $page.url==='/projects'}">Works</Link>
             <Link href="/services" class="mx-4 itm" :class="{'active': $page.url==='/services'}">Services</Link>
             <Link href="/about-me" class="mx-4 itm" :class="{'active': $page.url==='/about-me'}">About</Link>
-            <Link href="/blog" class="mx-4 itm" :class="{'active': $page.url==='/blog'}">Blog</Link>
+            <!--<Link href="/blog" class="mx-4 itm" :class="{'active': $page.url==='/blog'}">Blog</Link>-->
             <Link href="/contact" class="mx-4 itm" :class="{'active': $page.url==='/contact'}">Contact</Link>
         </div>
     </div>

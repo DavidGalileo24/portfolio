@@ -6,6 +6,7 @@ import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
+import Social from '@/Components/Social.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
 
 defineProps({
@@ -33,8 +34,8 @@ const alert = () => {
 
     <Head title="Contact me" />
     <Nav />
-    <div class="mt-5 p-10">
-        <div class="w-2/5 border rounded-lg p-5">
+    <div class="mt-5 p-10 flex">
+        <div class="w-1/2 border rounded-lg p-10">
             <h1 class="text-5xl transtitle">Contact Me</h1>
             <p class="text-md mt-3">Get in touch and let me know how can help</p>
 
@@ -59,8 +60,26 @@ const alert = () => {
                 </div>
             </form>
         </div>
-        <div class="w-3/5">
-
+        <div class="w-1/2 p-5">
+            <h1 class="text-5xl transtitle">Let's Connect</h1>
+            <p class="text-md mt-3">Looking for help? Fill the form and start a new adventure.</p>
+            <ul class="mt-7">
+                <li class="m-3 flex items-center">
+                    <font-awesome-icon :icon="['fas', 'envelope-open-text']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3" />
+                    {{ info.email }}
+                </li>
+                <li class="m-3 flex items-center">
+                    <font-awesome-icon :icon="['fas', 'phone-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3"/>
+                    {{ info.phone }}
+                </li>
+                <li class="m-3 flex items-center">
+                    <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3"/> 
+                    {{ info.address }}
+                </li>
+            </ul><br>
+            <div class="flex justify-end">
+                <Social />
+            </div>
         </div>
     </div>
 </template>
