@@ -70,6 +70,12 @@ class ViewController extends Controller
 
     public function allContact()
     {
-        //
+        return Inertia::render('Web/Contactme', [
+            'info' => [
+                'email' => 'info@davidsalgado.dev',
+                'phone' => '(+503) 64295902',
+                'address' => 'Sal Salvador, El Salvador',
+            ],
+        ]);
     }
 }

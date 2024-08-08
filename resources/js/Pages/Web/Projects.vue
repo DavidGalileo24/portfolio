@@ -32,7 +32,7 @@ const state = reactive({
 
     <Head title="Works" />
     <Nav />
-    <div class="mt-10 p-10">
+    <div class="mt-5 p-10">
         <h1 class="text-5xl transtitle">Recent work performed</h1>
         <p class="text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design

@@ -5,7 +5,7 @@ import { Link } from '@inertiajs/vue3';
 <template>
     <Link :href="'/'">
         <h1 class="great-vibes-regular text-center text-4xl p-5">
-            <span class="text-sky-500">David</span>
+            <span class="text-purple-500">David</span>
             <span class="">Salgado</span>
         </h1>
     </Link>
