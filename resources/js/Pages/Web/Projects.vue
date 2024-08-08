@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
@@ -32,9 +32,9 @@ const state = reactive({
 const showModal = (data) => {
     state.projectIdData = data;
     state.showModal = true;
-   /** axios.get(route('show.projects')).then(response => {
-        
-    }); */
+    /** axios.get(route('show.projects')).then(response => {
+         
+     }); */
 }
 const closeModal = () => {
     state.showModal = false;
@@ -63,8 +63,40 @@ const closeModal = () => {
     </div>
     <DialogModal :show="state.showModal" @close="closeModal()" :max-width="'5xl'">
         <template #content>
-            <div>
-                {{state.projectIdData}}
+            <div class="flex">
+                <div class="w-1/2">
+                    <img :src=state.projectIdData.image.file class="w-full h-72" />
+                </div>
+                <div class="w-1/2 p-4">
+                    <h1 class="font-bold text-xl">{{ state.projectIdData.name }}</h1>
+                    <div class="flex mt-2">
+                        <div class="w-1/3">
+                            <span class="font-semibold">Company:</span>
+                            <p>{{ state.projectIdData.company.name }}</p>
+                        </div>
+                        <div class="w-1/3">
+                            <span class="font-semibold">Status:</span>
+                            <p>{{ state.projectIdData.status }}</p>
+                        </div>
+                        <div class="w-1/3">
+                            <span class="font-semibold"> Project type:</span>
+                            <p>{{ state.projectIdData.type }}</p>
+                        </div>
+                    </div>
+                    <p class="mt-3">{{ state.projectIdData.description }}</p>
+                    <div class="flex justify-end mt-5">
+                        <Link :href="state.projectIdData.link">
+                        <PrimaryButton class="mx-1">
+                            <font-awesome-icon :icon="['fas', 'link']" class="mr-1" />Demo
+                        </PrimaryButton>
+                        </Link>
+                        <Link :href="state.projectIdData.link_repo">
+                        <SecondaryButton class="mx-1">
+                            <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />Repository
+                        </SecondaryButton>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </template>
     </DialogModal>

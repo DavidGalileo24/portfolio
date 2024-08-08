@@ -17,8 +17,8 @@ import 'animate.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub,faLinkedin,faInstagram, } from '@fortawesome/free-brands-svg-icons'
-import { faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,} from '@fortawesome/free-solid-svg-icons'
-library.add(faGithub,faLinkedin,faInstagram,faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,)
+import { faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,} from '@fortawesome/free-solid-svg-icons'
+library.add(faGithub,faLinkedin,faInstagram,faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,)
 
 const appName = import.meta.env.VITE_APP_NAME || 'Portfolio';
 const pinia = createPinia()

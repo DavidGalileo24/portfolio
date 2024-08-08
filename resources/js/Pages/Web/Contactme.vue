@@ -46,7 +46,7 @@ const alert = () => {
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Email" />
-                    <TextInput v-model="email" type="text" class="mt-1 block w-full" autofocus />
+                    <TextInput v-model="email" type="text" class="mt-1 block w-full" />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Message" />
