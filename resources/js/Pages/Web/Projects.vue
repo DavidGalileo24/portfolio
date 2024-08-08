@@ -30,7 +30,7 @@ const state = reactive({
 </script>
 <template>
 
-    <Head title="Proyectos" />
+    <Head title="Works" />
     <Nav />
     <div class="mt-10 p-10">
         <h1 class="text-5xl transtitle">Recent work performed</h1>

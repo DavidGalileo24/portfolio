@@ -30,7 +30,7 @@ const alert = () => {
 </script>
 <template>
 
-    <Head title="Inicio" />
+    <Head title="Home" />
     <div style="height: 100vh;" class="bg1">
         <Nav />
         <!--<div class="w-1/3 mx-auto">

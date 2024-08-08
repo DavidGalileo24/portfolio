@@ -70,6 +70,6 @@ class ViewController extends Controller
 
     public function allContact()
     {
-        return response()->json('test');
+        //
     }
 }
