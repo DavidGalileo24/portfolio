@@ -6,7 +6,7 @@ defineProps({});
 </script>
 
 <template>
-    <div class="p-4 flex justify-around items-center text-white" :class="{'mainBg' :  $page.url !='/'}">
+    <div class="p-4 flex justify-around items-center text-white" :class="{'bg-gray-800' :  $page.url !='/'}">
         <div class="w-1/4">
             <h1 class="great-vibes-regular text-3xl mx-2">
                 <span class="text-purple-500">David</span> 

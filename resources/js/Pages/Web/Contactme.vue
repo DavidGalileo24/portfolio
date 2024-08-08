@@ -60,7 +60,7 @@ const alert = () => {
                 </div>
             </form>
         </div>
-        <div class="w-1/2 p-5">
+        <div class="w-1/2 p-10">
             <h1 class="text-5xl transtitle">Let's Connect</h1>
             <p class="text-md mt-3">Looking for help? Fill the form and start a new adventure.</p>
             <ul class="mt-7">
@@ -76,7 +76,7 @@ const alert = () => {
                     <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3"/> 
                     {{ info.address }}
                 </li>
-            </ul><br>
+            </ul><hr>
             <div class="flex justify-end">
                 <Social />
             </div>
