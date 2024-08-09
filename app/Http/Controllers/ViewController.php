@@ -21,6 +21,7 @@ class ViewController extends Controller
         $data = Project::orderBy('id', 'desc')->get();
         $data->load('image');
         $data->load('company');
+        $data->load('technologies');
 
         return Inertia::render('Web/Projects', [
             'projects' => ProjectResource::collection($data),
@@ -29,9 +30,9 @@ class ViewController extends Controller
 
     public function showProjects(Project $project)
     {
-
         $project->load('image');
         $project->load('company');
+        $project->load('technologies');
 
         return Inertia::render('Web/Projects', [
             'show_project' => ProjectResource::make($project),

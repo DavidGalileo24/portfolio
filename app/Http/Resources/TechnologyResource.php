@@ -19,7 +19,7 @@ class TechnologyResource extends JsonResource
             'name' => $this->name,
             'percentaje' => $this->percentaje,
             'type' => $this->type,
-            'image' => new ImageResource($this->whenLoaded('image')),
+            'image' => new ImageResource($this->image),
             'services' => ServiceResource::collection($this->whenLoaded('services')),
         ];
     }

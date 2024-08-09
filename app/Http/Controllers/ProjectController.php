@@ -43,7 +43,7 @@ class ProjectController extends Controller
         $image = new ImageController();
         $img = $image->store($request->image, Project::class, $data->id);
         $data->image()->save($img);
-        $data->technologies()->attach($data->id, [$request->technology_id]);
+        $data->technologies()->attach($request->technology_id);
 
         return redirect()->route('admin.projects');
     }
@@ -51,6 +51,7 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $project->update($request->all());
+        $project->technologies()->sync($request->technology_id);
 
         return redirect()->route('admin.projects');
     }

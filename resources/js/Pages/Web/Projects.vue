@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
-import { Head, Link } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
@@ -32,12 +32,10 @@ const state = reactive({
 const showModal = (data) => {
     state.projectIdData = data;
     state.showModal = true;
-    /** axios.get(route('show.projects')).then(response => {
-         
-     }); */
 }
 const closeModal = () => {
     state.showModal = false;
+    state.projectIdData = '';
 }
 </script>
 <template>
@@ -65,14 +63,18 @@ const closeModal = () => {
         <template #content>
             <div class="flex">
                 <div class="w-1/2">
-                    <img :src=state.projectIdData.image.file class="w-full h-72" />
+                    <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy"/>
+                    <div class="font-semibold mt-5">Technologies:</div>
+                    <div v-for="tech in state.projectIdData.technologies" :key="tech.id" class="inline-block items-center">
+                        <img :src="tech.image.file" loading="lazy" class="w-12 h-12" />
+                    </div>
                 </div>
                 <div class="w-1/2 p-4">
                     <h1 class="font-bold text-xl">{{ state.projectIdData.name }}</h1>
                     <div class="flex mt-2">
                         <div class="w-1/3">
                             <span class="font-semibold">Company:</span>
-                            <p>{{ state.projectIdData.company.name }}</p>
+                            <img :src="state.projectIdData.company.image.file" class="w-7 h-7 " loading="lazy"/>
                         </div>
                         <div class="w-1/3">
                             <span class="font-semibold">Status:</span>
@@ -85,16 +87,16 @@ const closeModal = () => {
                     </div>
                     <p class="mt-3">{{ state.projectIdData.description }}</p>
                     <div class="flex justify-end mt-5">
-                        <Link :href="state.projectIdData.link">
-                        <PrimaryButton class="mx-1">
-                            <font-awesome-icon :icon="['fas', 'link']" class="mr-1" />Demo
-                        </PrimaryButton>
-                        </Link>
-                        <Link :href="state.projectIdData.link_repo">
-                        <SecondaryButton class="mx-1">
-                            <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />Repository
-                        </SecondaryButton>
-                        </Link>
+                        <a :href="state.projectIdData.link" target="blank">
+                            <PrimaryButton class="mx-1">
+                                <font-awesome-icon :icon="['fas', 'link']" class="mr-1" />Demo
+                            </PrimaryButton>
+                        </a>
+                        <a :href="state.projectIdData.link_repo" target="blank">
+                            <SecondaryButton class="mx-1">
+                                <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />Repository
+                            </SecondaryButton>
+                        </a>
                     </div>
                 </div>
             </div>
