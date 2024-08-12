@@ -7,7 +7,7 @@
             <slot name="image" />
         </div>
     <div>
-        <h3 class="text-xl font-semibold "><slot name="title" /></h3>
+        <h3 class="text-xl font-semibold poppins"><slot name="title" /></h3>
     </div>
     <p class="mt-2 text-md font-light">
         <slot name="description" />

@@ -2,29 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-.raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.great-vibes-regular {
+.great-vibes {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-
-  .poppins {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.transtitle{
-  font-weight: 700;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
 }
 
-  [x-cloak] {
-      display: none;
-  }
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.sniglet {
+    font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.transtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+}
+
+[x-cloak] {
+    display: none;
+}

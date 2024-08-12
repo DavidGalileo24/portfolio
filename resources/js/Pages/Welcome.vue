@@ -26,7 +26,7 @@ defineProps({
             <div class="w-full text-white flex justify-center">
                 <div class="text-center">
                     <div class="text-xl mx-auto rounded-md-xl">Hello There!</div>
-                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="text-7xl font-bold text-gray-200 transtitle" />
+                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="poppins text-7xl font-bold text-gray-200 transtitle" />
                     <div class="flex justify-center mt-10">
                         <Social />
                         <!--<PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >

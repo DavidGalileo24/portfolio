@@ -64,24 +64,24 @@ const closeModal = () => {
             <div class="flex">
                 <div class="w-1/2">
                     <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy"/>
-                    <div class="font-semibold mt-5">Technologies:</div>
+                    <div class="font-semibold mt-5 poppins">Technologies:</div>
                     <div v-for="tech in state.projectIdData.technologies" :key="tech.id" class="inline-block items-center">
                         <img :src="tech.image.file" loading="lazy" class="w-12 h-12" />
                     </div>
                 </div>
                 <div class="w-1/2 p-4">
-                    <h1 class="font-bold text-xl">{{ state.projectIdData.name }}</h1>
+                    <h1 class="font-bold text-xl poppins">{{ state.projectIdData.name }}</h1>
                     <div class="flex mt-2">
                         <div class="w-1/3">
-                            <span class="font-semibold">Company:</span>
+                            <span class="font-semibold poppins">Company:</span>
                             <img :src="state.projectIdData.company.image.file" class="w-7 h-7 " loading="lazy"/>
                         </div>
                         <div class="w-1/3">
-                            <span class="font-semibold">Status:</span>
+                            <span class="font-semibold poppins">Status:</span>
                             <p>{{ state.projectIdData.status }}</p>
                         </div>
                         <div class="w-1/3">
-                            <span class="font-semibold"> Project type:</span>
+                            <span class="font-semibold poppins"> Project type:</span>
                             <p>{{ state.projectIdData.type }}</p>
                         </div>
                     </div>
