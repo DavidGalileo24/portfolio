@@ -139,7 +139,7 @@ const closeModal = () => {
                         <div class="w-1/2 mx-1">
                             <InputLabel for="technology_id" value="Tecnologías" class="text-sm" />
                             <span v-for="tech in tech.data" :key="tech.id">
-                                <input v-model="state.form.technology_id" type="checkbox" :value="tech.id" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                <input v-model="state.form.technology_id" type="checkbox" :value="tech.id" class="w-5 h-5 text-green-600 bg-gray-100 border-gray-300 rounded">
                                 <label class="text-sm font-medium text-gray-900 dark:text-gray-300 mr-4 ml-0.5">{{tech.name}}</label>
                             </span>
                         </div>
@@ -174,7 +174,7 @@ const closeModal = () => {
                         <div class="w-1/3 mx-1">
                             <InputLabel for="type" value="Project type" class="text-sm" />
                             <select v-model="state.form.type"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                class="w-full border-gray-300 text-sm focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm">
                                 <option :value="type.name" v-for="type in state.projetType" :key="type.id">
                                     {{ type.name }}
                                 </option>
@@ -183,7 +183,7 @@ const closeModal = () => {
                         <div class="w-1/3 mx-1">
                             <InputLabel for="status" value="Project status" class="text-sm" />
                             <select v-model="state.form.status"
-                                class="w-full border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                class="w-full border-gray-300 text-sm focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm">
                                 <option :value="status.name" v-for="status in state.status" :key="status.id">
                                     {{ status.name }}
                                 </option>
@@ -193,7 +193,7 @@ const closeModal = () => {
                     <div class="mt-3">
                         <InputLabel for="description" value="Descripción" class="text-sm" />
                         <textarea v-model="state.form.description" type="text" rows="4"
-                            class="w-full text-sm border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
+                            class="w-full text-sm border-gray-300 focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm"></textarea>
                     </div>
                     <div class="mt-3 flex justify-end">
                         <PrimaryButton class="">

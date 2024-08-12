@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="p-4 bg-transparent border border-gray-400 rounded-tl-xl rounded-br-xl hover:cursor-pointer hover:bg-gray-900 hover:border-gray-900 hover:text-white">
+    <div class="p-4 bg-transparent border border-green-500 rounded-tl-xl rounded-br-xl hover:cursor-pointer hover:bg-gray-900 hover:border-gray-900 hover:text-white">
         <div class="w-12 h-12">
             <slot name="image" />
         </div>

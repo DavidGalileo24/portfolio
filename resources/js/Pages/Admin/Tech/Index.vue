@@ -81,7 +81,7 @@ const handleFile = (e) => {
                         <div class="mt-3">
                             <InputLabel for="type" value="Technology type" class="text-sm"/>
                             <select v-model="state.form.type"
-                                class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                class="w-full border-gray-300 focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm">
                                 <option value="Languaje">Languaje</option>
                                 <option value="Framework">Framework</option>
                                 <option value="Library">Library</option>

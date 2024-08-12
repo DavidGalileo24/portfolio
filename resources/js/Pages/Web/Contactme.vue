@@ -73,7 +73,7 @@ const alert = () => {
                     {{ info.phone }}
                 </li>
                 <li class="m-3 flex items-center">
-                    <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-green-400 p-3"/> 
+                    <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-3xl text-gray-800 rounded-xl bg-green-400 p-3"/> 
                     {{ info.address }}
                 </li>
             </ul><hr>

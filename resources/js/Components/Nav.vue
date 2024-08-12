@@ -28,13 +28,13 @@ defineProps({});
         background-color: #1c4645;
     }
     .active{
-        border-bottom: 2px solid #8BBCCC;
+        border-bottom: 2px solid #5FD068;
         padding-bottom: 2px;
     }
     .itm{
         transition: all 0.5s ease;
     }
     .itm:hover{
-        color: #8BBCCC;
+        color: #379777;
     }
 </style>
