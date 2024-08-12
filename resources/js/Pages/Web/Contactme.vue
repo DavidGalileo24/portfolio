@@ -36,7 +36,7 @@ const alert = () => {
     <Nav />
     <div class="mt-5 p-10 flex">
         <div class="w-1/2 border rounded-lg p-10">
-            <h1 class="text-5xl transtitle">Contact Me</h1>
+            <h1 class="text-5xl">Contact Me</h1>
             <p class="text-md mt-3">Get in touch and let me know how can help</p>
 
             <form class="rounded-lg bg-white w-full" @submit.prevent="downloadcv()">
@@ -61,7 +61,7 @@ const alert = () => {
             </form>
         </div>
         <div class="w-1/2 p-10">
-            <h1 class="text-5xl transtitle">Let's Connect</h1>
+            <h1 class="text-5xl">Let's Connect</h1>
             <p class="text-md mt-3">Looking for help? Fill the form and start a new adventure.</p>
             <ul class="mt-7">
                 <li class="m-3 flex items-center">

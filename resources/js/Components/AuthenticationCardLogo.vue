@@ -4,7 +4,7 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <Link :href="'/'">
-    <h1 class="great-vibes text-3xl mx-2">
+    <h1 class="great-vibes text-2xl mx-2">
         <span class="text-green-200">David</span>
         <span class="font-semibold">Salgado</span>
     </h1>

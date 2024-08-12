@@ -8,7 +8,7 @@ defineProps({});
 <template>
     <div class="p-4 flex justify-around items-center text-white" :class="{'bg-green-800' :  $page.url !='/'}">
         <div class="w-1/4">
-            <h1 class="great-vibes text-3xl mx-2">
+            <h1 class="great-vibes text-2xl mx-2">
                 <span class="text-green-200">David</span> 
                 <span class="font-semibold">Salgado</span>
             </h1>

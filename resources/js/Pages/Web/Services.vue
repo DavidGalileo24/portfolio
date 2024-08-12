@@ -18,7 +18,7 @@ defineProps({
     <div class="mt-5 p-10 ">
         <div class="w-full p-5">
             <div class="flex">
-                <h1 class="text-5xl transtitle">Services I provide to my clients in here</h1>
+                <h1 class="text-5xl">Services I provide to my clients in here</h1>
                 <p class="text-md mt-3">I always want to be able to meet the goals of my clients, I value my services as a designer through my work. You may like my services.</p>
             </div>
             <!--<SecondaryButton class="mt-5"><font-awesome-icon :icon="['fas', 'plus']" /> All services</SecondaryButton>-->
