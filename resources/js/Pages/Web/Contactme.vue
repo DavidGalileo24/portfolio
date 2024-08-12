@@ -34,8 +34,8 @@ const alert = () => {
 
     <Head title="Contact me" />
     <Nav />
-    <div class="mt-5 p-10 flex">
-        <div class="w-1/2 border rounded-lg p-10">
+    <div class="mt-5 p-10 lg:flex md:flex">
+        <div class="lg:w-1/2 border rounded-lg p-10 md:w-1/2 sm:w-full xs:w-full">
             <h1 class="text-5xl">Contact Me</h1>
             <p class="text-md mt-3">Get in touch and let me know how can help</p>
 
@@ -51,7 +51,7 @@ const alert = () => {
                 <div class="mt-3">
                     <InputLabel for="name" value="Message" />
                     <textarea v-model="description" id="" cols="30" rows="3"
-                        class="mt-1 border-gray-300 rounded-md shadow-sm block w-full"></textarea>
+                        class="mt-1 border-gray-300 rounded-md block w-full"></textarea>
                 </div>
                 <div class="flex justify-end mt-2">
                     <PrimaryButton class="m-1">
@@ -60,7 +60,7 @@ const alert = () => {
                 </div>
             </form>
         </div>
-        <div class="w-1/2 p-10">
+        <div class="xl:w-1/2 p-10 md:w-1/2 sm:w-full xs:w-full">
             <h1 class="text-5xl">Let's Connect</h1>
             <p class="text-md mt-3">Looking for help? Fill the form and start a new adventure.</p>
             <ul class="mt-7">

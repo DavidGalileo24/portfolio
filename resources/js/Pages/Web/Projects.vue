@@ -47,12 +47,12 @@ const closeModal = () => {
         <p class="text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design
         </p>
-        <div class="w-full mt-10 flex justify-center">
+        <div class="w-full mt-10  justify-center lg:flex md:w-1/2 sm:w-1/2 xs:w-full">
             <SecondaryButton class="m-1">All projects</SecondaryButton>
             <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id">{{ types.name }}
             </SecondaryButton>
         </div>
-        <div class="grid grid-cols-3 gap-3 mt-7">
+        <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             <CardImage v-for="projects in projects.data" :key="projects.id" @click="showModal(projects)">
                 <template #image><img :src="projects.image.file" class=" rounded-tl-xl rounded-br-xl "
                         loading="lazy" /></template>
