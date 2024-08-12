@@ -6,10 +6,10 @@ defineProps({});
 </script>
 
 <template>
-    <div class="p-4 flex justify-around items-center text-white" :class="{'bg-gray-800' :  $page.url !='/'}">
+    <div class="p-4 flex justify-around items-center text-white" :class="{'bg-green-800' :  $page.url !='/'}">
         <div class="w-1/4">
             <h1 class="great-vibes text-3xl mx-2">
-                <span class="text-purple-500">David</span> 
+                <span class="text-green-200">David</span> 
                 <span class="font-semibold">Salgado</span>
             </h1>
         </div>
@@ -25,7 +25,7 @@ defineProps({});
 </template>
 <style scoped>
     .mainBg{
-        background-color: #5C2E7E;
+        background-color: #1c4645;
     }
     .active{
         border-bottom: 2px solid #8BBCCC;

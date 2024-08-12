@@ -4,9 +4,9 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <Link :href="'/'">
-        <h1 class="great-vibes text-center text-4xl p-5">
-            <span class="text-purple-500">David</span>
-            <span class="">Salgado</span>
-        </h1>
+    <h1 class="great-vibes text-3xl mx-2">
+        <span class="text-green-200">David</span>
+        <span class="font-semibold">Salgado</span>
+    </h1>
     </Link>
 </template>

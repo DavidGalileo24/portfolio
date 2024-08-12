@@ -65,15 +65,15 @@ const alert = () => {
             <p class="text-md mt-3">Looking for help? Fill the form and start a new adventure.</p>
             <ul class="mt-7">
                 <li class="m-3 flex items-center">
-                    <font-awesome-icon :icon="['fas', 'envelope-open-text']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3" />
+                    <font-awesome-icon :icon="['fas', 'envelope-open-text']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-green-400 p-3" />
                     {{ info.email }}
                 </li>
                 <li class="m-3 flex items-center">
-                    <font-awesome-icon :icon="['fas', 'phone-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3"/>
+                    <font-awesome-icon :icon="['fas', 'phone-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-green-400 p-3"/>
                     {{ info.phone }}
                 </li>
                 <li class="m-3 flex items-center">
-                    <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-purple-300 p-3"/> 
+                    <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="mx-2 text-2xl text-gray-800 rounded-xl bg-green-400 p-3"/> 
                     {{ info.address }}
                 </li>
             </ul><hr>
