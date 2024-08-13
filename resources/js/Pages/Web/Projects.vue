@@ -53,9 +53,14 @@ const closeModal = () => {
             </SecondaryButton>
         </div>
         <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-            <CardImage v-for="projects in projects.data" :key="projects.id" @click="showModal(projects)">
-                <template #image><img :src="projects.image.file" class=" rounded-tl-xl rounded-br-xl "
+            <CardImage v-for="projects in projects.data" :key="projects.id">
+                <template #image><img :src="projects.image.file" class="opacity-90 rounded-tl-xl rounded-br-xl "
                         loading="lazy" /></template>
+                <template #title>{{projects.name}}</template>
+                <template #button>
+                    <SecondaryButton class="" v-tooltip="'Details from work'" @click="showModal(projects)">
+                        Read more <font-awesome-icon :icon="['fas', 'arrow-right']" />
+                    </SecondaryButton></template>
             </CardImage>
         </div>
     </div>
