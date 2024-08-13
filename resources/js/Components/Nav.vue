@@ -21,8 +21,8 @@ defineProps({});
             <!--<Link href="/blog" class="mx-4 itm" :class="{'active': $page.url==='/blog'}">Blog</Link>-->
             <Link href="/contact" class="mx-4 itm" :class="{'active': $page.url==='/contact'}">Contact</Link>
         </div>
-        <div class="lg:hidden md:hidden sm:w-1/2 xs:w-1/2 xs:justify-start">
-            <font-awesome-icon :icon="['fas', 'bars']" class="text-xl" />
+        <div class="lg:hidden md:hidden sm:w-1/2 xs:w-1/2 xs:justify-start cursor-pointer">
+            <font-awesome-icon :icon="['fas', 'bars']" class="text-xl hover:text-green-200" />
         </div>
     </div>
 </template>

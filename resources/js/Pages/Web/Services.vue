@@ -23,7 +23,7 @@ defineProps({
             </div>
             <!--<SecondaryButton class="mt-5"><font-awesome-icon :icon="['fas', 'plus']" /> All services</SecondaryButton>-->
         </div>
-        <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <div class="grid gap-3 mt-7 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
             <Card v-for="services in services.data" :key="services.id" class="mt-1">
                 <template #image><img :src="services.image.file" loading="lazy"  /></template>
                 <template #title>{{services.name}}</template>

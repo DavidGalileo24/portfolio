@@ -47,7 +47,7 @@ const closeModal = () => {
         <p class="text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design
         </p>
-        <div class="w-full mt-10  justify-center lg:flex md:w-1/2 sm:w-1/2 xs:w-full">
+        <div class="w-full mt-10  justify-center flex">
             <SecondaryButton class="m-1">All projects</SecondaryButton>
             <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id">{{ types.name }}
             </SecondaryButton>
@@ -63,37 +63,40 @@ const closeModal = () => {
         <template #content>
             <div class="flex">
                 <div class="w-1/2">
-                    <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy"/>
-                    <div class="font-semibold mt-5 poppins">Technologies:</div>
-                    <div v-for="tech in state.projectIdData.technologies" :key="tech.id" class="inline-block items-center">
-                        <img :src="tech.image.file" loading="lazy" class="w-12 h-12" />
-                    </div>
-                </div>
-                <div class="w-1/2 p-4">
-                    <h1 class="font-bold text-xl poppins">{{ state.projectIdData.name }}</h1>
-                    <div class="flex mt-2">
-                        <div class="w-1/3">
+                    <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy" />
+                    <div class="flex mt-2 justify-between text-center">
+                        <div class="w-1/3 border-r-2">
                             <span class="font-semibold poppins">Company:</span>
-                            <img :src="state.projectIdData.company.image.file" class="w-7 h-7 " loading="lazy"/>
+                            <img :src="state.projectIdData.company.image.file" class="w-7 h-7 " loading="lazy" style="display:block;margin:0 auto"/>
                         </div>
                         <div class="w-1/3">
                             <span class="font-semibold poppins">Status:</span>
                             <p>{{ state.projectIdData.status }}</p>
                         </div>
-                        <div class="w-1/3">
+                        <div class="w-1/3 border-l-2">
                             <span class="font-semibold poppins"> Project type:</span>
                             <p>{{ state.projectIdData.type }}</p>
                         </div>
                     </div>
+                </div>
+                <div class="w-1/2 p-4">
+                    <h1 class="font-bold text-xl poppins">{{ state.projectIdData.name }}</h1>
                     <p class="mt-3">{{ state.projectIdData.description }}</p>
+                    <div>
+                        <span class="font-semibold mt-5 poppins block">Technologies:</span>
+                        <div v-for="tech in state.projectIdData.technologies" :key="tech.id"
+                            class="inline-block items-center">
+                            <img :src="tech.image.file" loading="lazy" class="w-10 h-10" v-tooltip="tech.name"/>
+                        </div>
+                    </div><hr>
                     <div class="flex justify-end mt-5">
                         <a :href="state.projectIdData.link" target="blank">
-                            <PrimaryButton class="mx-1">
+                            <PrimaryButton class="mx-1" v-tooltip="'View URL Demo'">
                                 <font-awesome-icon :icon="['fas', 'link']" class="mr-1" />Demo
                             </PrimaryButton>
                         </a>
                         <a :href="state.projectIdData.link_repo" target="blank">
-                            <SecondaryButton class="mx-1">
+                            <SecondaryButton class="mx-1" v-tooltip="'View code repository'">
                                 <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />Repository
                             </SecondaryButton>
                         </a>
