@@ -25,7 +25,7 @@ class ProjectResource extends JsonResource
             'color' => $this->color,
             'description' => $this->description,
             'image' => new ImageResource($this->whenLoaded('image')),
-            'technologies' => TechnologyResource::collection($this->whenLoaded('technologies'))
+            'technologies' => TechnologyResource::collection($this->whenLoaded('technologies')),
         ];
     }
 }

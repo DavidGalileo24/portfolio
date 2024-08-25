@@ -1,7 +1,6 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
 import Social from '@/Components/Social.vue';
 
 const typedStrings = ["I'm David Salgado", 'Lives In San Salvador', 'FullStack Developer', 'Frontend Developer', 'Backend Developer', 'Freelancer', 'Autodidact', 'Web Designer'];
@@ -14,7 +13,7 @@ defineProps({
 <template>
 
     <Head title="Home" />
-    <div style="height: 100vh;" class="bg1">
+    <div style="height: 100vh;" class="">
         <Nav />
         <!--<div class="w-1/3 mx-auto">
             <marquee>
@@ -23,10 +22,10 @@ defineProps({
             </marquee>
         </div>-->
         <div class="flex justify-center items-center h-4/5 w-full">
-            <div class="w-full text-white flex justify-center">
+            <div class="w-full flex justify-center">
                 <div class="text-center">
                     <div class="text-xl mx-auto rounded-md-xl">Hello There!</div>
-                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="poppins text-7xl font-bold text-gray-200 transtitle" />
+                    <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="poppins text-7xl font-bold transtitle" />
                     <div class="flex justify-center mt-10">
                         <Social />
                         <!--<PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >
@@ -41,7 +40,7 @@ defineProps({
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img10.png') !important;
+    background-image: url('/images/img1.png') !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;

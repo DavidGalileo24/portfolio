@@ -6,11 +6,11 @@ defineProps({});
 </script>
 
 <template>
-    <div class="p-4 flex justify-between items-center text-white" :class="{'bg-green-800' :  $page.url !='/'}">
+    <div class="p-4 flex justify-between items-center text-white bg-green-800">
         <div class="w-1/4 sm:w-1/2 xs:w-1/2">
             <h1 class="great-vibes text-2xl mx-2">
                 <span class="text-green-200">David</span> 
-                <span class="font-semibold">Salgado</span>
+                <span class="font-semibold text-gray-300">Salgado</span>
             </h1>
         </div>
         <div class="w-3/4 xl:flex items-center justify-end text-md itemsHeader">
