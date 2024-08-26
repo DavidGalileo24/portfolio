@@ -54,7 +54,7 @@ const closeModal = () => {
         </div>
         <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             <CardImage v-for="projects in projects.data" :key="projects.id">
-                <template #image><img :src="projects.image.file" class="opacity-90 rounded-tl-xl rounded-br-xl "
+                <template #image><img :src="projects.image.file" class="opacity-90 rounded-tl-xl rounded-br-xl info"
                         loading="lazy" /></template>
                 <template #title>{{projects.name}}</template>
                 <template #button>

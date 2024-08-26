@@ -32,7 +32,7 @@ Route::controller(ViewController::class)->group(function () {
     Route::get('/projects', 'allProjects')->name('projects');
     Route::get('/projects/{project}', 'showProjects')->name('show.projects');
     Route::get('/services', 'allServices')->name('services');
-    Route::get('/about-me', 'allAboutme')->name('aboutme');
+    Route::get('/about-me', 'allAboutme')->name('about-me');
     Route::get('/blog', 'allBlogs')->name('blog');
     Route::get('/contact', 'allContact')->name('contact');
 });
