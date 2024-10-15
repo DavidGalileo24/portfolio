@@ -13,7 +13,7 @@ defineProps({
 <template>
 
     <Head title="Home" />
-    <div style="height: 100vh;" class="">
+    <div style="height: 100vh;" class="bg1">
         <Nav />
         <!--<div class="w-1/3 mx-auto">
             <marquee>
@@ -21,7 +21,7 @@ defineProps({
                 <p class="text-center">Loading...</p>
             </marquee>
         </div>-->
-        <div class="flex justify-center items-center h-4/5 w-full">
+        <div class="flex justify-center items-center h-4/5 w-full text-white">
             <div class="w-full flex justify-center">
                 <div class="text-center">
                     <div class="text-xl mx-auto rounded-md-xl">Hello There!</div>
@@ -40,7 +40,7 @@ defineProps({
 
 <style scoped>
 .bg1 {
-    background-image: url('/images/img1.png') !important;
+    background-image: url('/images/img10.png') !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
