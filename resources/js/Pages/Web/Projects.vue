@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, onMounted } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
@@ -7,6 +7,9 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import CardImage from '@/Components/CardImage.vue';
 import DialogModal from '@/Components/DialogModal.vue';
 
+onMounted(() => {
+    resetToZero();
+});
 defineProps({
     projects: {
         type: Object,
@@ -21,6 +24,7 @@ defineProps({
 const state = reactive({
     showModal: false,
     projectIdData: [],
+    tabActive: 0,
     status: [{ id: 1, name: 'Development' }, { id: 2, name: 'Production' }],
     projetType: [
         { id: 1, name: 'Landing page' },
@@ -33,6 +37,15 @@ const showModal = (data) => {
     state.projectIdData = data;
     state.showModal = true;
 }
+
+const resetToZero=()=> {
+    state.tabActive = 0;
+}
+const changeTab=()=>{
+    state.tabActive = 1;
+    console.log('Cambia prro');
+}
+
 const closeModal = () => {
     state.showModal = false;
     state.projectIdData = '';
@@ -48,8 +61,8 @@ const closeModal = () => {
             and adaptive design
         </p>
         <div class="w-full mt-10  justify-center flex">
-            <SecondaryButton class="m-1">All projects</SecondaryButton>
-            <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id">{{ types.name }}
+            <SecondaryButton class="m-1 active">All projects</SecondaryButton>
+            <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id" :class="{'active': state.tabActive == 1}" @click="changeTab()">{{ types.name }}
             </SecondaryButton>
         </div>
         <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
