@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'link_repo' => $request->link_repo,
             'description' => $request->description,
         ]);
-        $image = new ImageController();
+        $image = new ImageController;
         $img = $image->store($request->image, Project::class, $data->id);
         $data->image()->save($img);
         $data->technologies()->attach($request->technology_id);

@@ -21,7 +21,7 @@ class CompanyController extends Controller
 
     public function store(Request $request)
     {
-        $image = new ImageController();
+        $image = new ImageController;
         $data = Company::create(['name' => $request->name]);
         $img = $image->store($request->image, Company::class, $data->id);
         $data->image()->save($img);

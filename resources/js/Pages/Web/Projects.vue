@@ -43,7 +43,6 @@ const resetToZero=()=> {
 }
 const changeTab=()=>{
     state.tabActive = 1;
-    console.log('Cambia prro');
 }
 
 const closeModal = () => {

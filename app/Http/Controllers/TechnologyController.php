@@ -21,7 +21,7 @@ class TechnologyController extends Controller
 
     public function store(Request $request)
     {
-        $image = new ImageController();
+        $image = new ImageController;
         $data = Technology::create(['name' => $request->name, 'percentaje' => $request->percentaje, 'type' => $request->type]);
         $img = $image->store($request->image, Technology::class, $data->id);
         $data->image()->save($img);

@@ -21,7 +21,7 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
-        $image = new ImageController();
+        $image = new ImageController;
         $data = Service::create(['name' => $request->name, 'description' => $request->description]);
         $img = $image->store($request->image, Service::class, $data->id);
         $data->image()->save($img);
