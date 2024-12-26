@@ -75,7 +75,7 @@ class ViewController extends Controller
             'info' => [
                 'email' => 'info@davidsalgado.dev',
                 'phone' => '(+503) 64295902',
-                'address' => 'Sal Salvador, El Salvador',
+                'address' => 'San Salvador, El Salvador',
             ],
         ]);
     }
