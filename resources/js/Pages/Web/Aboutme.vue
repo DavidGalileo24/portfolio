@@ -40,7 +40,7 @@ defineProps({
     </div>
     <div class="flex justify-center items-center p-5">
         <div v-for="tech in tech.data" :key="tech.id">
-            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20"  v-tooltip="tech.name" />
+            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20"  v-tooltip="tech.namehw" />
         </div>
     </div>
 </template>

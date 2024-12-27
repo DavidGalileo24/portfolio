@@ -42,19 +42,19 @@ const alert = () => {
             <form class="rounded-lg bg-white w-full" @submit.prevent="downloadcv()">
                 <div class="mt-5">
                     <InputLabel for="name" value="Name" />
-                    <TextInput v-model="name" type="text" class="mt-1 block w-full" autofocus />
+                    <TextInput v-model="name" type="text" class="mt-1 block w-full" disabled autofocus />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Email" />
-                    <TextInput v-model="email" type="text" class="mt-1 block w-full" />
+                    <TextInput v-model="email" type="text" class="mt-1 block w-full" disabled />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Message" />
                     <textarea v-model="description" id="" cols="30" rows="3"
-                        class="mt-1 border-gray-300 rounded-md block w-full"></textarea>
+                        class="mt-1 border-gray-300 rounded-md block w-full" disabled ></textarea>
                 </div>
                 <div class="flex justify-end mt-2">
-                    <PrimaryButton class="m-1">
+                    <PrimaryButton class="m-1" disabled >
                         <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send message
                     </PrimaryButton>
                 </div>
