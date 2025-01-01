@@ -67,7 +67,7 @@ const closeModal = () => {
         <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             <CardImage v-for="projects in projects.data" :key="projects.id">
                 <template #image><img :src="projects.image.file" class="opacity-90 rounded-tl-xl rounded-br-xl info"
-                        loading="lazy" /></template>
+                        loading="lazy" style="width: 100%; height: 75%;" /></template>
                 <template #title>{{projects.name}}</template>
                 <template #button>
                     <SecondaryButton class="" v-tooltip="'Details from work'" @click="showModal(projects)">
@@ -79,7 +79,7 @@ const closeModal = () => {
     <DialogModal :show="state.showModal" @close="closeModal()" :max-width="'5xl'">
         <template #content>
             <div class="flex">
-                <div class="w-1/2">
+                <div class="w-2/3">
                     <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy" />
                     <div class="flex mt-2 justify-between text-center">
                         <div class="w-1/3 border-r-2">
