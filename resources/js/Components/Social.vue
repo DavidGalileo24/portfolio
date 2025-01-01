@@ -16,6 +16,11 @@ defineProps({});
                 <font-awesome-icon :icon="['fab', 'linkedin']" class="text-green-500 hover:text-green-600" />
             </a>
         </div>
+        <div class="m-2 bgicons" v-tooltip="'Whatsapp'">
+            <a href="https://wa.link/a6cffz" target="_blank">
+                <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-green-500 hover:text-green-600" />
+            </a>
+        </div>
         <div class="m-2 bgicons" v-tooltip="'Instagram'">
             <a href="https://www.instagram.com/david_galileo24/" target="_blank">
                 <font-awesome-icon :icon="['fab', 'instagram']" class="text-green-500 hover:text-green-600"/>

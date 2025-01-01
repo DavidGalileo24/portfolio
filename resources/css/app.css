@@ -27,3 +27,6 @@
 [x-cloak] {
     display: none;
 }
+textarea {
+    field-sizing: content;
+}

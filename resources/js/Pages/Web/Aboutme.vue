@@ -1,13 +1,7 @@
 <script setup>
-import { reactive } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import TextInput from '@/Components/TextInput.vue';
-import Social from '@/Components/Social.vue';
-import Swal from 'sweetalert2/dist/sweetalert2';
 
 defineProps({
     tech: {
@@ -40,7 +34,7 @@ defineProps({
     </div>
     <div class="flex justify-center items-center p-5">
         <div v-for="tech in tech.data" :key="tech.id">
-            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20"  v-tooltip="tech.namehw" />
+            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20"  v-tooltip="tech.name" />
         </div>
     </div>
 </template>

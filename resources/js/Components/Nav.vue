@@ -52,8 +52,8 @@ const showingNavigationDropdown = ref(false);
             <ResponsiveNavLink href="/services" :class="{ 'active': $page.url === '/services' }">
                 Services
             </ResponsiveNavLink>
-            <ResponsiveNavLink href="/projects" :class="{ 'active': $page.url === '/about-me' }">
-                Projects
+            <ResponsiveNavLink href="/about-me" :class="{ 'active': $page.url === '/about-me' }">
+                About me
             </ResponsiveNavLink>
             <ResponsiveNavLink href="/contact" :class="{ 'active': $page.url === '/contact' }">
                 Contact
