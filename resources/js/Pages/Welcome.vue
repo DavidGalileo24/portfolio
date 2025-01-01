@@ -15,12 +15,6 @@ defineProps({
     <Head title="Home" />
     <div style="height: 100vh;" class="bg1">
         <Nav />
-        <!--<div class="w-1/3 mx-auto">
-            <marquee>
-                <img loading="lazy" src="/images/loading.gif" class="loadingclass animate__animated animate__pulse animate__infinite	infinite" alt="">
-                <p class="text-center">Loading...</p>
-            </marquee>
-        </div>-->
         <div class="flex justify-center items-center h-4/5 w-full text-white">
             <div class="w-full flex justify-center">
                 <div class="text-center">
@@ -28,9 +22,6 @@ defineProps({
                     <VueTyped :strings="typedStrings" :typeSpeed="70" :backSpeed="50" :loop="true" class="poppins text-7xl font-bold transtitle" />
                     <div class="flex justify-center mt-10">
                         <Social />
-                        <!--<PrimaryButton class="mx-4" v-tooltip="'Download'" @click="downloadcv()" >
-                            <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-                        </PrimaryButton>-->
                     </div>
                 </div>
             </div>

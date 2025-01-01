@@ -12,7 +12,7 @@ defineProps({});
             </a>
         </div>
         <div class="m-2 bgicons" v-tooltip="'Linkedin'">
-            <a href="https://www.linkedin.com/in/david-galileo-salgado-mejia/" target="_blank">
+            <a href="https://www.linkedin.com/in/david-galileo-salgado-mejia" target="_blank">
                 <font-awesome-icon :icon="['fab', 'linkedin']" class="text-green-500 hover:text-green-600" />
             </a>
         </div>
@@ -22,7 +22,7 @@ defineProps({});
             </a>
         </div>
         <div class="m-2 bgicons" v-tooltip="'Instagram'">
-            <a href="https://www.instagram.com/david_galileo24/" target="_blank">
+            <a href="https://www.instagram.com/david_galileo24" target="_blank">
                 <font-awesome-icon :icon="['fab', 'instagram']" class="text-green-500 hover:text-green-600"/>
             </a>
         </div>

@@ -8,7 +8,6 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import Filepond from '@/Components/Filepond.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
 import DialogModal from '@/Components/DialogModal.vue';
-import { FwbA, FwbTable, FwbTableBody, FwbTableCell, FwbTableHead, FwbTableHeadCell, FwbTableRow } from 'flowbite-vue'
 
 defineProps({
     projects: {

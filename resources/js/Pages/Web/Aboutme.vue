@@ -2,6 +2,7 @@
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Swal from 'sweetalert2/dist/sweetalert2';
 
 defineProps({
     tech: {
@@ -13,6 +14,19 @@ defineProps({
         default: ({})
     },
 });
+
+const downloadcv = () => {
+    Swal.fire({
+        icon: 'success',
+        text: 'Download CV successfully!',
+        toast: true,
+        position: 'bottom-right',
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true
+    });
+} 
+
 </script>
 <template>
 
@@ -26,9 +40,11 @@ defineProps({
             <h1 class="text-5xl">About Me</h1>
             <p class="text-md mt-3">Hello there! I am a web developer, and I am very passionate and dedicated to my work. With 3 years experience as a professional, I have adquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
             <div class="mt-3">
-                <PrimaryButton class="" v-tooltip="'Download'" @click="downloadcv()" >
-                    <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
-                </PrimaryButton>
+                <a href="assets/davidsalgado-cv.pdf" download>
+                    <PrimaryButton class="" v-tooltip="'Download CV'" @click="downloadcv()">
+                        <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
+                    </PrimaryButton>
+                </a>
             </div>
         </div>
     </div>
