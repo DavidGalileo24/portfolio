@@ -9,9 +9,11 @@ use App\Http\Resources\ServiceResource;
 use App\Http\Resources\TechnologyResource;
 use App\Models\Blog;
 use App\Models\Company;
+use App\Models\Contact;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Technology;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class ViewController extends Controller
@@ -78,5 +80,14 @@ class ViewController extends Controller
                 'address' => 'San Salvador, El Salvador',
             ],
         ]);
+    }
+    
+    public function storeContact(Request $request){
+        $data = Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'description' => $request->description,
+        ]);
+        return redirect()->route('contact');
     }
 }

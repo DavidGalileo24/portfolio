@@ -1,10 +1,12 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
+import { reactive } from 'vue';
+import { Head, useForm } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import Social from '@/Components/Social.vue';
+import Swal from 'sweetalert2/dist/sweetalert2';
 
 defineProps({
     info: {
@@ -12,9 +14,39 @@ defineProps({
         default: ({})
     },
 });
+
+
+const state = reactive({
+    edit: '',
+    form: useForm({
+        name: '',
+        email: '',
+        description: '',
+    })
+});
+
+
 const contactForm = () => {
-    console.log('store');
+    state.form.post(route('storecontact'));
+    clearForm();
+    alert();
 }
+const clearForm=()=>{
+    state.form.name = '';
+    state.form.email = '';
+    state.form.description = '';
+}
+const alert = () => {
+    Swal.fire({
+        icon: 'success',
+        text: 'Sending email successfully!',
+        toast: true,
+        position: 'bottom-right',
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true
+    });
+} 
 </script>
 <template>
 
@@ -24,22 +56,22 @@ const contactForm = () => {
         <div class="lg:w-1/2 border rounded-lg p-10 md:w-1/2 sm:w-full xs:w-full">
             <h1 class="text-5xl">Contact Me</h1>
             <p class="text-md mt-3">Get in touch and let me know how can help</p>
-            <form class="rounded-lg bg-white w-full" @submit.prevent="downloadcv()">
+            <form class="rounded-lg bg-white w-full" @submit.prevent="contactForm()">
                 <div class="mt-5">
                     <InputLabel for="name" value="Name" />
-                    <TextInput v-model="name" type="text" class="mt-1 block w-full" disabled autofocus />
+                    <TextInput v-model="state.form.name" type="text" class="mt-1 block w-full" autofocus />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Email" />
-                    <TextInput v-model="email" type="text" class="mt-1 block w-full" disabled />
+                    <TextInput v-model="state.form.email" type="text" class="mt-1 block w-full" />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Message" />
-                    <textarea v-model="description" id="" cols="30" rows="3"
-                        class="mt-1 border-gray-300 rounded-md block w-full" disabled ></textarea>
+                    <textarea v-model="state.form.description" id="" cols="30" rows="3"
+                        class="mt-1 border-gray-300 rounded-md block w-full" ></textarea>
                 </div>
                 <div class="flex justify-end mt-2">
-                    <PrimaryButton class="m-1" disabled >
+                    <PrimaryButton class="m-1" >
                         <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send message
                     </PrimaryButton>
                 </div>
