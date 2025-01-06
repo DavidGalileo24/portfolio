@@ -10,7 +10,7 @@ import { useHead } from 'unhead'
 
 useHead({
   title: 'Projects',
-  ogImage: '@/assets/images/ico.png',
+  ogImage: '@/images/ico.png',
   twitterCard: 'summary_large_image',
   meta: [
     {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
@@ -72,8 +72,8 @@ const closeModal = () => {
             and adaptive design
         </p>
         <div class="w-full mt-10  justify-center flex">
-            <SecondaryButton class="m-1 active">All projects</SecondaryButton>
-            <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id" :class="{'active': state.tabActive == 1}" @click="changeTab()">{{ types.name }}
+            <PrimaryButton class="m-1 active">All projects</PrimaryButton>
+            <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id" :class="{'active': state.tabActive == 1}" @click="changeTab()" disabled>{{ types.name }}
             </SecondaryButton>
         </div>
         <div class="grid gap-3 mt-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">

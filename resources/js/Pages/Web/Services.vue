@@ -7,7 +7,7 @@ import { useHead } from 'unhead'
 
 useHead({
   title: 'Services',
-  ogImage: '@/assets/images/ico.png',
+  ogImage: '@/images/ico.png',
   twitterCard: 'summary_large_image',
   meta: [
     {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
