@@ -32,8 +32,8 @@ const downloadcv = () => {
 
     <Head title="About me" />
     <Nav />
-    <div class="p-5 lg:flex md:flex bg-green-800 text-white border-t scree items-center">
-        <div class="lg:w-1/3 p-10 md:w-1/2 sm:w-full xs:w-full">
+    <div class="p-5 lg:flex md:flex bg-green-800 text-white border-t screen items-center">
+        <div class="lg:w-1/3 p-10 md:w-1/2 sm:w-1/2 xs:w-full">
             <img src="images/photo1.png" class="mx-auto"/>
         </div>
         <div class="xl:w-2/3 p-16 md:w-1/2 sm:w-full xs:w-full">
@@ -41,17 +41,20 @@ const downloadcv = () => {
             <p class="text-md mt-3">Hello there! I am a web developer, and I am very passionate and dedicated to my work. With 3 years experience as a professional, I have adquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
             <div class="mt-3">
                 <a href="assets/davidsalgado-cv.pdf" download>
-                    <PrimaryButton class="" v-tooltip="'Download CV'" @click="downloadcv()">
+                    <PrimaryButton class="" v-tooltip="'Download CV'" @click="downloadcv()" disabled>
                         <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
                     </PrimaryButton>
                 </a>
             </div>
         </div>
     </div>
-    <div class="flex justify-center items-center p-5">
+    <div class="p-5 mt-5">
+        <h1 class="text-5xl text-center">My Skills</h1>
+        <div class="flex justify-center items-center mt-3">
         <div v-for="tech in tech.data" :key="tech.id">
-            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20"  v-tooltip="tech.name" />
+            <img :src="tech.image.file" alt="tech.name" class="w-20 h-20 m-1"  v-tooltip="tech.name" />
         </div>
+    </div>
     </div>
 </template>
 
