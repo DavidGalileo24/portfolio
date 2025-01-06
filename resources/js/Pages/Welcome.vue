@@ -2,6 +2,18 @@
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import Social from '@/Components/Social.vue';
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'Home',
+  ogImage: '@/assets/images/ico.png',
+  twitterCard: 'summary_large_image',
+  meta: [
+    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:title', content: 'Home'},
+  ]
+});
 
 const typedStrings = ["I'm David Salgado", 'Lives In San Salvador', 'FullStack Developer', 'Frontend Developer', 'Backend Developer', 'Freelancer', 'Autodidact', 'Web Designer'];
 defineProps({

@@ -13,6 +13,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import '/node_modules/flowbite-vue/dist/index.css'
 import 'floating-vue/dist/style.css'
 import 'animate.css';
+import { createHead } from 'unhead'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -22,6 +23,7 @@ library.add(faGithub,faLinkedin,faInstagram,faWhatsapp,faDownload,faBriefcase,fa
 
 const appName = import.meta.env.VITE_APP_NAME || 'Portfolio';
 const pinia = createPinia()
+const head = createHead()
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

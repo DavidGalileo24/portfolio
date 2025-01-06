@@ -6,6 +6,18 @@ import SecondaryButton from '@/Components/SecondaryButton.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import CardImage from '@/Components/CardImage.vue';
 import DialogModal from '@/Components/DialogModal.vue';
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'Projects',
+  ogImage: '@/assets/images/ico.png',
+  twitterCard: 'summary_large_image',
+  meta: [
+    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:title', content: 'Projects'},
+  ]
+});
 
 onMounted(() => {
     resetToZero();

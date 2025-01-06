@@ -31,6 +31,7 @@
         "flowbite": "^2.3.0",
         "flowbite-vue": "^0.1.4",
         "pinia": "^2.1.7",
+        "unhead": "^1.11.14",
         "vue-chartjs": "^5.3.1",
         "vue-filepond": "^7.0.4",
         "vue-sweetalert2": "^5.0.11",

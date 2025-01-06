@@ -7,6 +7,18 @@ import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import Social from '@/Components/Social.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'Contact me',
+  ogImage: '@/assets/images/ico.png',
+  twitterCard: 'summary_large_image',
+  meta: [
+    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:title', content: 'Contact me'},
+  ]
+});
 
 defineProps({
     info: {

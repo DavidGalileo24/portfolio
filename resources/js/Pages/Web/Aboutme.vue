@@ -3,6 +3,18 @@ import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import Swal from 'sweetalert2/dist/sweetalert2';
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'About me',
+  ogImage: '@/assets/images/ico.png',
+  twitterCard: 'summary_large_image',
+  meta: [
+    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:title', content: 'About me'},
+  ]
+});
 
 defineProps({
     tech: {
