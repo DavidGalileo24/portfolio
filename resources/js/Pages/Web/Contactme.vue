@@ -5,8 +5,11 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import Social from '@/Components/Social.vue';
+import { useContactStore } from '@/Stores/contact';
+
 import { useHead } from 'unhead'
 
+const contact = useContactStore();
 useHead({
   title: 'Contact me',
   ogImage: '@/images/ico.png',
@@ -32,25 +35,25 @@ defineProps({
 
     <Head title="Contact me" />
     <Nav />
-    <div class="mt-5 p-5 lg:flex md:flex">
-        <div class="lg:w-1/2 border rounded-lg p-10 md:w-1/2 sm:w-full xs:w-full">
+    <div class="mt-5 p-5 lg:flex md:flex ">
+        <div class="lg:w-1/2 bg-gray-100 rounded-xl p-10 md:w-1/2 sm:w-full xs:w-full">
             <h1 class="text-5xl">Contact Me</h1>
             <p class="text-md mt-3">Get in touch and let me know how can help</p>
-            <form class="rounded-lg bg-white w-full" @submit.prevent="contactForm()">
+            <form class="rounded-lg w-full" @submit.prevent="contact.contactForm()">
                 <div class="mt-5">
                     <InputLabel for="name" value="Name" />
-                    <TextInput v-model="state.form.name" type="text" class="mt-1 block w-full" autofocus />
+                    <TextInput v-model="contact.form.name" type="text" class="mt-1 block w-full" autofocus />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Email" />
-                    <TextInput v-model="state.form.email" type="text" class="mt-1 block w-full" />
+                    <TextInput v-model="contact.form.email" type="text" class="mt-1 block w-full" />
                 </div>
                 <div class="mt-3">
                     <InputLabel for="name" value="Message" />
-                    <textarea v-model="state.form.description" id="" cols="30" rows="3"
+                    <textarea v-model="contact.form.description" id="" cols="30" rows="3"
                         class="mt-1 border-gray-300 rounded-md block w-full" ></textarea>
                 </div>
-                <div class="flex justify-end mt-2">
+                <div class="flex justify-end mt-5">
                     <PrimaryButton class="m-1" >
                         <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send message
                     </PrimaryButton>

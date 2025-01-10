@@ -71,7 +71,7 @@ const closeModal = () => {
         <p class="text-md">Most common methods for designing websites that work well on desktop is responsive
             and adaptive design
         </p>
-        <div class="w-full mt-10  justify-center flex">
+        <div class="w-full mt-10 justify-center flex">
             <PrimaryButton class="m-1 active">All projects</PrimaryButton>
             <SecondaryButton class="m-1" v-for="types in state.projetType" :key="types.id" :class="{'active': state.tabActive == 1}" @click="changeTab()" disabled>{{ types.name }}
             </SecondaryButton>
@@ -88,10 +88,10 @@ const closeModal = () => {
             </CardImage>
         </div>
     </div>
-    <DialogModal :show="state.showModal" @close="closeModal()" :max-width="'5xl'">
+    <DialogModal :show="state.showModal" @close="closeModal()" :max-width="'4xl'">
         <template #content>
-            <div class="flex">
-                <div class="w-2/3">
+            <div class="lg:flex items-center w-full">
+                <div class="lg:w-1/2 sm:w-full xs:w-full">
                     <img :src=state.projectIdData.image.file class="w-full h-72 rounded-md" loading="lazy" />
                     <div class="flex mt-2 justify-between text-center">
                         <div class="w-1/3 border-r-2">
@@ -108,7 +108,7 @@ const closeModal = () => {
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 p-4">
+                <div class="lg:w-1/2 p-4 xs:w-full sm:w-full">
                     <h1 class="font-bold text-xl poppins">{{ state.projectIdData.name }}</h1>
                     <p class="mt-3">{{ state.projectIdData.description }}</p>
                     <div>

@@ -19,9 +19,9 @@ const showingNavigationDropdown = ref(false);
         </div>
         <div class="w-3/4 xl:flex items-center justify-end text-md itemsHeader">
             <Link href="/" class="mx-4 itm" :class="{ 'active': $page.url === '/' }">Home</Link>
-            <Link href="/projects" class="mx-4 itm" :class="{ 'active': $page.url === '/projects' }">Works</Link>
+            <Link href="/projects" class="mx-4 itm" :class="{ 'active': $page.url === '/projects' }">Projects</Link>
             <Link href="/services" class="mx-4 itm" :class="{ 'active': $page.url === '/services' }">Services</Link>
-            <Link href="/about-me" class="mx-4 itm" :class="{ 'active': $page.url === '/about-me' }">About</Link>
+            <Link href="/about-me" class="mx-4 itm" :class="{ 'active': $page.url === '/about-me' }">About me</Link>
             <!--<Link href="/blog" class="mx-4 itm" :class="{'active': $page.url==='/blog'}">Blog</Link>-->
             <Link href="/contact" class="mx-4 itm" :class="{ 'active': $page.url === '/contact' }">Contact</Link>
         </div>

@@ -50,7 +50,7 @@ useHead({
         </div>
     </div>
     <div class="p-5 mt-5">
-        <h1 class="text-5xl text-center">My Skills</h1>
+        <h1 class="text-5xl">My Skills</h1>
         <div class="flex justify-center items-center mt-3 flex-wrap">
         <div v-for="tech in tech.data" :key="tech.id">
             <img :src="tech.image.file" alt="tech.name" class="w-20 h-20 m-1"  v-tooltip="tech.name" />

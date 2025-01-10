@@ -33,7 +33,7 @@ defineProps({
                 <h1 class="text-5xl">Services I provide to my clients in here</h1>
                 <p class="text-md mt-3">I always want to be able to meet the goals of my clients, I value my services as a designer through my work. You may like my services.</p>
             </div>
-            <SecondaryButton class="mt-5"><font-awesome-icon :icon="['fas', 'plus']" disabled /> All services</SecondaryButton>
+            <SecondaryButton disabled class="mt-5"><font-awesome-icon :icon="['fas', 'plus']"  /> All services</SecondaryButton>
         </div>
         <div class="lg:w-2/3 grid gap-3 mt-7 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
             <Card v-for="services in services.data" :key="services.id" class="mt-1">
