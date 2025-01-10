@@ -18,8 +18,8 @@ import { createHead } from 'unhead'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub,faLinkedin,faWhatsapp,faInstagram, } from '@fortawesome/free-brands-svg-icons'
-import { faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,faBars,faArrowRight,} from '@fortawesome/free-solid-svg-icons'
-library.add(faGithub,faLinkedin,faInstagram,faWhatsapp,faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,faBars,faArrowRight,)
+import { faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,faBars,faArrowRight,faIdCard} from '@fortawesome/free-solid-svg-icons'
+library.add(faGithub,faLinkedin,faInstagram,faWhatsapp,faDownload,faBriefcase,faHandPeace,faPaperPlane,faHome,faCode,faTerminal,faStar,faMapMarkerAlt,faNewspaper,faPhoneAlt,faEnvelopeOpenText,faPlus,faLink,faBars,faArrowRight,faIdCard)
 
 const appName = import.meta.env.VITE_APP_NAME || 'Portfolio';
 const pinia = createPinia()

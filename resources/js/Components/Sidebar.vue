@@ -44,6 +44,12 @@ import AuthenticationCardLogo from './AuthenticationCardLogo.vue';
                     <template #default><font-awesome-icon :icon="['fas', 'newspaper']" class="text-gray-300  mr-3 text-lg" />Blog</template>
                 </Link>
                 </fwb-sidebar-item>
+            <!--blog-->
+                <fwb-sidebar-item>
+                    <Link href="/admin/contacts" :class="{'active': $page.url==='/admin/contacts'}" class="w-full block">
+                    <template #default><font-awesome-icon :icon="['fas', 'id-card']" class="text-gray-300  mr-3 text-lg" />Contacts</template>
+                </Link>
+                </fwb-sidebar-item>
         </fwb-sidebar>
     </div>
 </template>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TechnologyController;
@@ -67,5 +68,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::resource('/companies', CompanyController::class)
         ->names(['index' => 'admin.company', 'store' => 'admin.company.store', 'update' => 'admin.company.update', 'destroy' => 'admin.company.delete'])
         ->except(['create', 'edit']);
+    
+    // Contacts
+    Route::resource('/contacts', ContactController::class)
+        ->names(['index' => 'admin.contacts'])
+        ->only(['index']);
 
 });
