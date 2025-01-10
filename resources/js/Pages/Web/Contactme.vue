@@ -1,12 +1,10 @@
 <script setup>
-import { reactive } from 'vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import Social from '@/Components/Social.vue';
-import Swal from 'sweetalert2/dist/sweetalert2';
 import { useHead } from 'unhead'
 
 useHead({
@@ -28,37 +26,7 @@ defineProps({
 });
 
 
-const state = reactive({
-    edit: '',
-    form: useForm({
-        name: '',
-        email: '',
-        description: '',
-    })
-});
 
-
-const contactForm = () => {
-    state.form.post(route('storecontact'));
-    clearForm();
-    alert();
-}
-const clearForm=()=>{
-    state.form.name = '';
-    state.form.email = '';
-    state.form.description = '';
-}
-const alert = () => {
-    Swal.fire({
-        icon: 'success',
-        text: 'Sending email successfully!',
-        toast: true,
-        position: 'bottom-right',
-        showConfirmButton: false,
-        timer: 3500,
-        timerProgressBar: true
-    });
-} 
 </script>
 <template>
 

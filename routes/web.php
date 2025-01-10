@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TechnologyController;
@@ -38,8 +37,8 @@ Route::controller(ViewController::class)->group(function () {
     Route::get('/contact', 'allContact')->name('contact');
     Route::post('/contact', 'storeContact')->name('storecontact');
 });
- 
-//admin
+
+// admin
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
@@ -49,24 +48,24 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         ->names(['index' => 'admin.projects', 'store' => 'admin.projects.store', 'update' => 'admin.projects.update', 'destroy' => 'admin.projects.delete'])
         ->except(['create', 'edit']);
 
-    //Services
+    // Services
     Route::resource('/services', ServiceController::class)
         ->names(['index' => 'admin.services', 'store' => 'admin.services.store', 'update' => 'admin.services.update', 'destroy' => 'admin.services.delete'])
         ->except(['create', 'show', 'edit']);
 
-    //Technologies
+    // Technologies
     Route::resource('/technologies', TechnologyController::class)
         ->names(['index' => 'admin.tech', 'store' => 'admin.tech.store', 'update' => 'admin.tech.update', 'destroy' => 'admin.tech.delete'])
         ->except(['create', 'show', 'edit']);
 
-    //Blog
+    // Blog
     Route::resource('/blog', BlogController::class)
         ->names(['index' => 'admin.blog', 'store' => 'admin.blog.store', 'update' => 'admin.blog.update', 'destroy' => 'admin.blog.delete'])
         ->except(['create', 'edit']);
 
-    //Company
+    // Company
     Route::resource('/companies', CompanyController::class)
         ->names(['index' => 'admin.company', 'store' => 'admin.company.store', 'update' => 'admin.company.update', 'destroy' => 'admin.company.delete'])
         ->except(['create', 'edit']);
-       
+
 });

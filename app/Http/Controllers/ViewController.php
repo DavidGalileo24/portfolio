@@ -81,13 +81,15 @@ class ViewController extends Controller
             ],
         ]);
     }
-    
-    public function storeContact(Request $request){
+
+    public function storeContact(Request $request)
+    {
         $data = Contact::create([
             'name' => $request->name,
             'email' => $request->email,
             'description' => $request->description,
         ]);
+
         return redirect()->route('contact');
     }
 }

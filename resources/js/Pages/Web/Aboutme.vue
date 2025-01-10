@@ -2,20 +2,10 @@
 import { Head } from '@inertiajs/vue3';
 import Nav from '@/Components/Nav.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
-import Swal from 'sweetalert2/dist/sweetalert2';
-import { useHead } from 'unhead'
+import { useHead } from 'unhead';
+import { useAboutmeStore } from '@/Stores/aboutme';
 
-useHead({
-  title: 'About me',
-  ogImage: '@/images/ico.png',
-  twitterCard: 'summary_large_image',
-  meta: [
-    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
-    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
-    {property: 'og:title', content: 'About me'},
-  ]
-});
-
+const aboutme = useAboutmeStore();
 defineProps({
     tech: {
         type: Object,
@@ -27,17 +17,16 @@ defineProps({
     },
 });
 
-const downloadcv = () => {
-    Swal.fire({
-        icon: 'success',
-        text: 'Download CV successfully!',
-        toast: true,
-        position: 'bottom-right',
-        showConfirmButton: false,
-        timer: 3500,
-        timerProgressBar: true
-    });
-} 
+useHead({
+  title: 'About me',
+  ogImage: '@/images/ico.png',
+  twitterCard: 'summary_large_image',
+  meta: [
+    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:title', content: 'About me'},
+  ]
+});
 
 </script>
 <template>
@@ -53,7 +42,7 @@ const downloadcv = () => {
             <p class="text-md mt-3">Hello there! I am a web developer, and I am very passionate and dedicated to my work. With 3 years experience as a professional, I have adquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
             <div class="mt-3">
                 <a href="assets/davidsalgado-cv.pdf" download>
-                    <PrimaryButton class="" v-tooltip="'Download CV'" @click="downloadcv()" disabled>
+                    <PrimaryButton class="" v-tooltip="'Download CV'" @click="aboutme.downloadcv()" disabled>
                         <font-awesome-icon :icon="['fas', 'download']" class="mr-2" />Curriculum Vitae
                     </PrimaryButton>
                 </a>
