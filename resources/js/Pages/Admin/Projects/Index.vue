@@ -93,14 +93,13 @@ const closeModal = () => {
 
 <template>
     <AppLayout title="Projects">
-        <div class="bg-gray-800 overflow-hidden my-3">
             <div class="w-full p-5">
                 <PrimaryButton @click="showModalStoreUpdate()">New project</PrimaryButton>
                 <div class="w-full flex flex-wrap justify-center m-2">
                     <fwb-table class="w-full">
                         <fwb-table-head>
-                            <fwb-table-head-cell>Color</fwb-table-head-cell>
-                            <fwb-table-head-cell>Image</fwb-table-head-cell>
+                            <!--<fwb-table-head-cell>Color</fwb-table-head-cell>-->
+                            <!--<fwb-table-head-cell>Image</fwb-table-head-cell>-->
                             <fwb-table-head-cell>project</fwb-table-head-cell>
                             <fwb-table-head-cell>Company</fwb-table-head-cell>
                             <fwb-table-head-cell>Link</fwb-table-head-cell>
@@ -111,8 +110,8 @@ const closeModal = () => {
                         </fwb-table-head>
                         <fwb-table-body>
                             <fwb-table-row v-for="pr in projects.data" :key="pr.id">
-                                <fwb-table-cell>{{ pr.color }}</fwb-table-cell>
-                                <fwb-table-cell><img :src="pr.image.file" class="techlogo" alt="" loading="lazy" ></fwb-table-cell>
+                                <!--<fwb-table-cell>{{ pr.color }}</fwb-table-cell>-->
+                                <!--<fwb-table-cell><img :src="pr.image.file" class="techlogo" alt="" loading="lazy" ></fwb-table-cell>-->
                                 <fwb-table-cell>{{ pr.name }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.company.name }}</fwb-table-cell>
                                 <fwb-table-cell>{{ pr.link }}</fwb-table-cell>
@@ -124,7 +123,6 @@ const closeModal = () => {
                         </fwb-table-body>
                     </fwb-table>
                 </div>
-            </div>
         </div>
         <DialogModal :show="state.modalStoreUpdate" @close="closeModal()" :max-width="'5xl'">
             <template #title>Added new project</template>

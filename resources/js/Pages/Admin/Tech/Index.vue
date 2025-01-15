@@ -60,7 +60,6 @@ const handleFile = (e) => {
 </script>
 <template>
     <AppLayout title="Technologies">
-        <div class="bg-gray-800 overflow-hidden my-3">
             <div class="w-full flex p-5">
                 <div class="w-1/4">
                     <form class="p-3 border rounded-lg bg-white" @submit.prevent="storeTech()">
@@ -95,7 +94,7 @@ const handleFile = (e) => {
                         </div>
                     </form>
                 </div>
-                <div class="w-3/4 flex flex-wrap justify-center mx-2">
+                <div class="w-3/4 flex flex-wrap justify-center mx-2 bg-gray-800 overflow-hidden p-2 rounded-md">
                     <span v-for="tech in tech.data" :key="tech.id">
                         <fwb-card href="#" class="m-2 mt-0">
                             <div class="p-2">
@@ -109,7 +108,6 @@ const handleFile = (e) => {
                         </fwb-card>
                     </span>
                 </div>
-            </div>
         </div>
     </AppLayout>
 </template>
