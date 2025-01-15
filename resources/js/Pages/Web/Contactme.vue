@@ -15,8 +15,8 @@ useHead({
   ogImage: '@/images/ico.png',
   twitterCard: 'summary_large_image',
   meta: [
-    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
-    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {name: 'description', content: 'David Galileo Salgado FullStack Developer using Laravel and Vue, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Galileo Salgado FullStack Developer using Laravel and Vue, autodidact and Freelancer based in San Salvador El Salvador'},
     {property: 'og:title', content: 'Contact me'},
   ]
 });

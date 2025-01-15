@@ -17,8 +17,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title inertia>{{ config('app.name', 'David Salgado') }}</title>
-    <meta name="description" content="David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador">
+    <title inertia>{{ config('app.name', 'David Galileo Salgado') }}</title>
+    <meta name="description" content="David Galileo Salgado FullStack Developer using Laravel and Vue, autodidact and Freelancer based in San Salvador El Salvador">
     <link rel="icon" type="image/x-icon" href="images/ico.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

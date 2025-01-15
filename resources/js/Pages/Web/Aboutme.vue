@@ -22,8 +22,8 @@ useHead({
   ogImage: '@/images/ico.png',
   twitterCard: 'summary_large_image',
   meta: [
-    {name: 'description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
-    {property: 'og:description', content: 'David Salgado Web Developer, autodidact and Freelancer based in San Salvador El Salvador'},
+    {name: 'description', content: 'David Galileo Salgado FullStack Developer using Laravel and Vue, autodidact and Freelancer based in San Salvador El Salvador'},
+    {property: 'og:description', content: 'David Galileo Salgado FullStack Developer using Laravel and Vue, autodidact and Freelancer based in San Salvador El Salvador'},
     {property: 'og:title', content: 'About me'},
   ]
 });
@@ -37,7 +37,7 @@ useHead({
         <div class="lg:w-1/3 p-10 md:w-1/2 sm:w-1/2 xs:w-full">
             <img src="images/photo1.png" class="mx-auto"/>
         </div>
-        <div class="xl:w-2/3 p-16 md:w-1/2 sm:w-full xs:w-full">
+        <div class="xl:w-2/3 p-5 md:w-1/2 sm:w-full xs:w-full">
             <h1 class="text-5xl">About Me</h1>
             <p class="text-md mt-3">Hello there! I am a web developer, and I am very passionate and dedicated to my work. With 3 years experience as a professional, I have adquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
             <div class="mt-3">

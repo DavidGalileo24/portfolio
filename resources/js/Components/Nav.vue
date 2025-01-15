@@ -9,7 +9,7 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <div class="p-4 flex justify-between items-center text-white bg-green-800"
+    <div class="p-4 flex justify-between items-center sticky top-0 text-white bg-green-800"
         :class="{ 'bg-transparent': $page.url == '/' }">
         <div class="w-1/4 sm:w-1/2 xs:w-1/2">
             <h1 class="great-vibes text-2xl mx-2">
