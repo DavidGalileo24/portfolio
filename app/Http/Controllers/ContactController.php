@@ -9,7 +9,6 @@ use Inertia\Inertia;
 
 class ContactController extends Controller
 {
-
     public function index()
     {
         $data = Contact::orderBy('id', 'desc')->get();
@@ -18,7 +17,6 @@ class ContactController extends Controller
             'contacts' => ContactResource::collection($data),
         ]);
     }
-
 
     public function store(Request $request)
     {

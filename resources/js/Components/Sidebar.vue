@@ -35,7 +35,7 @@ import AuthenticationCardLogo from './AuthenticationCardLogo.vue';
             <!--customers-->
                 <fwb-sidebar-item>
                     <Link href="/admin/companies" :class="{'active': $page.url==='/admin/companies'}" class="w-full block">
-                    <template #default><font-awesome-icon :icon="['fas', 'star']" class="text-gray-300  mr-3 text-lg" />Customers</template>
+                    <template #default><font-awesome-icon :icon="['fas', 'star']" class="text-gray-300  mr-3 text-lg" />Companies</template>
                 </Link>
                 </fwb-sidebar-item>
             <!--blog-->

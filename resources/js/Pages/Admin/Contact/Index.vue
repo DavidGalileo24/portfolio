@@ -1,9 +1,5 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import TextInput from '@/Components/TextInput.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import Filepond from '@/Components/Filepond.vue';
 import { FwbCard } from 'flowbite-vue';
 import { FwbA, FwbTable, FwbTableBody, FwbTableCell, FwbTableHead, FwbTableHeadCell, FwbTableRow } from 'flowbite-vue'
 
