@@ -24,6 +24,14 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
 }
+.techlogo {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 1px solid #dae2eb;
+}
 [x-cloak] {
     display: none;
 }

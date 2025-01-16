@@ -26,12 +26,12 @@ const state = reactive({
     })
 });
 
-const storeTech=()=>{
+const storeTech = () => {
     state.form.post(route('admin.tech.store'));
     clearForm();
     alert();
 }
-const clearForm=()=>{
+const clearForm = () => {
     state.form.name = '';
     state.form.percentaje = '';
     state.form.type = '';
@@ -47,7 +47,7 @@ const alert = () => {
         timer: 3500,
         timerProgressBar: true
     });
-} 
+}
 const handleFile = (e) => {
     const image = e.target.files[0];
     if (!image) return;
@@ -60,64 +60,56 @@ const handleFile = (e) => {
 </script>
 <template>
     <AppLayout title="Technologies">
-            <div class="w-full flex p-5">
-                <div class="w-1/4">
-                    <form class="p-3 border rounded-lg bg-white" @submit.prevent="storeTech()">
-                        <h2 class="text-xl font-semibold text-center">Added new technology</h2>
-                        <div class="mt-3">
-                            <InputLabel for="image" value="Image" class="text-sm"/>
-                            <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
-                                max-files="1" />
-                        </div>
-                        <div class="mt-5">
-                            <InputLabel for="name" value="Name" class="text-sm" />
-                            <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="percentaje" value="Percentaje" class="text-sm"/>
-                            <TextInput v-model="state.form.percentaje" type="text" class="block w-full" />
-                        </div>
-                        <div class="mt-3">
-                            <InputLabel for="type" value="Technology type" class="text-sm"/>
-                            <select v-model="state.form.type"
-                                class="w-full border-gray-300 focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm">
-                                <option value="Languaje">Languaje</option>
-                                <option value="Framework">Framework</option>
-                                <option value="Library">Library</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="mt-3">
-                            <PrimaryButton class="m-1 w-full">
-                                <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send data
-                            </PrimaryButton>
-                        </div>
-                    </form>
-                </div>
-                <div class="w-3/4 flex flex-wrap justify-center mx-2 bg-gray-800 overflow-hidden p-2 rounded-md">
-                    <span v-for="tech in tech.data" :key="tech.id">
-                        <fwb-card href="#" class="m-2 mt-0">
-                            <div class="p-2">
-                                <img :src="tech.image.file" alt="logo" class="techlogo" loading="lazy" >
-                                <h3 class="text-lg font-bold tracking-tight text-center text-gray-900">{{tech.name}}</h3>
-                                <div class="flex justify-evenly mt-3">
-                                    <span class="text-xs bg-black text-white rounded-xl p-1 text-center">{{tech.type}}</span>
-                                    <span>{{tech.percentaje}}%</span>
-                                </div>
+        <div class="w-full flex p-5">
+            <div class="w-1/4">
+                <form class="p-3 border rounded-lg bg-white" @submit.prevent="storeTech()">
+                    <h2 class="text-xl font-semibold text-center">Added new technology</h2>
+                    <div class="mt-3">
+                        <InputLabel for="image" value="Image" class="text-sm" />
+                        <Filepond v-model="state.form.image" @change="handleFile($event)" allow-multiple="false"
+                            max-files="1" />
+                    </div>
+                    <div class="mt-5">
+                        <InputLabel for="name" value="Name" class="text-sm" />
+                        <TextInput v-model="state.form.name" type="text" class="block w-full" autofocus />
+                    </div>
+                    <div class="mt-3">
+                        <InputLabel for="percentaje" value="Percentaje" class="text-sm" />
+                        <TextInput v-model="state.form.percentaje" type="text" class="block w-full" />
+                    </div>
+                    <div class="mt-3">
+                        <InputLabel for="type" value="Technology type" class="text-sm" />
+                        <select v-model="state.form.type"
+                            class="w-full border-gray-300 focus:border-green-500 focus:ring-green-500 rounded-md shadow-sm">
+                            <option value="Languaje">Languaje</option>
+                            <option value="Framework">Framework</option>
+                            <option value="Library">Library</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mt-3">
+                        <PrimaryButton class="m-1 w-full">
+                            <font-awesome-icon :icon="['fas', 'paper-plane']" class="mr-2" />Send data
+                        </PrimaryButton>
+                    </div>
+                </form>
+            </div>
+            <div class="w-3/4 flex flex-wrap justify-center mx-2 bg-gray-800 overflow-hidden p-2 rounded-md">
+                <span v-for="tech in tech.data" :key="tech.id">
+                    <fwb-card href="#" class="m-2 mt-0">
+                        <div class="p-2">
+                            <img :src="tech.image.file" alt="logo" class="techlogo" loading="lazy">
+                            <h3 class="text-lg font-bold tracking-tight text-center text-gray-900">{{ tech.name }}</h3>
+                            <div class="flex justify-evenly mt-3">
+                                <span
+                                    class="text-xs bg-black text-white rounded-xl p-1 text-center">{{ tech.type }}</span>
+                                <span>{{ tech.percentaje }}%</span>
                             </div>
-                        </fwb-card>
-                    </span>
-                </div>
+                        </div>
+                    </fwb-card>
+                </span>
+            </div>
         </div>
     </AppLayout>
 </template>
-<style scoped>
-    .techlogo{
-        padding: 5px;
-        width: 125px;
-        height: 110px;
-        display:block;
-        margin:0 auto;
-        border-bottom: 1px solid #dae2eb;
-    }
-</style>
+<style scoped></style>
